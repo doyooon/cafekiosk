@@ -1,0 +1,198 @@
+version: "2.0"
+
+intents:
+  - greet
+  - affirm
+  - deny_order
+  - order_drink
+  - provide_size
+  - provide_temp
+  - provide_count
+  - provide_size_temp
+  - provide_size_count
+  - provide_temp_count
+  - provide_size_temp_count
+  - q_size
+  - q_menu
+  - q_order
+  - q_price
+  - ask_menu
+  - change_order
+  - cancel_order
+  - q_wifi
+  - q_toilet
+  - q_lost_item
+  - q_outside_food
+  - q_pet
+  - q_k_cash_receipts
+  - q_re_cash_receipts
+  - q_taken_time
+  - q_trash
+  - q_open_close_time
+  - q_payment_method
+
+
+entities:
+  - menu:
+      roles:
+      - from
+      - to
+  - count:
+      roles:
+      - from
+      - to
+  - size:
+      roles:
+      - from
+      - to
+  - temp:
+      roles:
+      - from
+      - to
+  - category #메뉴 종류 : 커피,음료,차
+
+slots:
+  menu:
+    type: text
+    influence_conversation: false
+  count:
+    type: text
+    influence_conversation: false
+  size:
+    type: text
+    influence_conversation: false
+  temp:
+    type: text
+    influence_conversation: false
+  order_queue:
+    type: list
+    influence_conversation: false
+  category:
+    type: text
+    influence_conversation: false
+  ordered_queue:
+    type: list
+    influence_conversation: false
+  asked_queue:
+    type: list
+    influence_conversation: false
+  before:
+    type: list
+    influence_conversation: false
+
+actions:
+  - action_order_queue
+  - action_order_queue_next
+  - action_submit_order
+  - validate_order_form
+  - action_q_menu
+  - action_ask_menu
+  - action_fill_slot_with_order_drink
+  - action_change_order
+  - action_cancel_order
+  - action_q_order
+  - action_q_price
+  - action_order_after_ask
+
+responses:
+  utter_greet:
+   - text: "반갑습니다. 주문부탁드려요"
+   - text: "안녕하세요, 무엇을 도와 드릴까요"
+   - text: "환영합니다"
+  utter_ask_size:
+   - text: "{menu}의 사이즈는 어떻게 해드릴까요? 작은 사이즈, 중간 사이즈, 큰 사이즈가 있습니다."
+   - text: "{menu}의 사이즈를 선택해 주세요. 스몰, 미디움, 라지 중에서 선택해 주세요."
+   - text: "{menu}를 어떤 사이즈로 드릴까요? 스몰, 미디엄, 라지 중에서 골라주세요."
+  utter_ask_temp:
+   - text: "{menu}는 차갑게 해드릴까요 뜨겁게 해드릴까요?"
+   - text: "{menu}는 아이스로 할까요, 핫으로 할까요?"
+   - text: "{menu}를 차갑게 드릴까요? 따뜻하게 드릴까요?"
+   - text: "{menu}의 온도는 어떻게 해드릴까요? 뜨겁게,차갑게 중에 선택해 주세요."
+   - text: "{menu}를 따뜻하게 드릴까요, 아니면 차갑게 드릴까요?"
+  utter_ask_count:
+   - text: "{menu}를 몇 잔 주문하시겠어요?"
+   - text: "{menu}를 몇 잔 주문할까요?"
+   - text: "{menu}의 주문하실 수량을 알려주세요."
+  utter_ask_for_order:
+   - text: "추가 메뉴를 말씀해주세요"
+   - text: "또 어떤 것으로 드릴까요"
+  utter_proceed_to_payment:
+   - text: "결제 절차를 진행합니다. 결제 방법을 선택해 주세요"
+  utter_q_size:
+   - text: "사이즈는 스몰,미디움,라지 사이즈가 있어요"
+  utter_ask_menu:
+   - text: "메뉴 부터 말씀해주세요"
+   - text: "메뉴를 포함해서 주문해주시면 감사합니다"
+  utter_q_menu:
+   - text: "저희는 커피,티,음료 종류를 팔고있어요"
+   - text: "저희는 커피와 티, 음료등을 팔고 있어요"
+  utter_q_payment_method:
+   - text: "카드만 사용하실 수 있어요"
+   - text: "아직은 카드만 지원해요"
+  utter_q_open_close_time:
+   - text: "오전 10시부터 오후 9시 까지 영업해요"
+   - text: "아침 10시부터 저녁 9시 까지 영업해요"
+  utter_q_trash:
+   - text: "출입구 건너편에 쓰레기통이 있어요"
+   - text: "음료 반환하는 곳에 쓰레기를 버릴 수 있어요"
+  utter_q_taken_time:
+   - text: "한잔 당 약 4분 정도 소요됩니다. 더 자세한 시간은 직원에게 문의주세요"
+  utter_q_more_cup:
+   - text: "저희 매장은 여분의 컵을 제공하지 않습니다"
+  utter_q_re_cash_receipts:
+   - text: "직원에게 문의해주세요"
+  utter_q_k_cash_receipts:
+   - text: "카드 결제밖에 되지 않기 때문에 현금영수증은 어려워요"
+  utter_q_pet:
+   - text: "도우미견을 제외한 애완동물의 출입은 힘들어요"
+  utter_q_outside_food:
+   - text: "매장 외 음식은 반입이 안됩니다. 매장 내 음식을 이용해주세요"
+  utter_q_lost_item:
+   - text: "매장 내 직원에게 문의 바랍니다"
+  utter_q_toilet:
+   - text: "출입문 오른쪽에 화장실이 있어요"
+  utter_q_wifi:
+   - text: "반납 데스크에 와이파이 정보를 적어뒀어요"
+
+forms:
+  order_form:
+    ignored_intents:
+      - greet
+      - affirm
+      - deny_order
+      - q_size
+      - q_menu
+      - q_order
+      - q_price
+      - ask_menu
+      - change_order
+      - cancel_order
+      - q_wifi
+      - q_toilet
+      - q_lost_item
+      - q_outside_food
+      - q_pet
+      - q_k_cash_receipts
+      - q_re_cash_receipts
+      - q_taken_time
+      - q_trash
+      - q_open_close_time
+      - q_payment_method
+      
+    required_slots:
+        menu:
+          - type: from_entity
+            entity: menu
+        size:
+          - type: from_entity
+            entity: size
+        count:
+          - type: from_entity
+            entity: count
+        temp:
+          - type: from_entity
+            entity: temp
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,161 @@
+version: "2.0"
+rules:
+  - rule: Start order form after initial order
+    condition:
+      - active_loop: null
+    steps:
+      - intent: order_drink
+      - action: action_order_queue
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Submit order form and process next order
+    condition:
+      - active_loop: order_form
+    steps:
+      - action: order_form
+      - active_loop: null
+      - action: action_submit_order
+
+  - rule: Handle ask_menu and then order
+    steps:
+      - intent: ask_menu
+      - action: action_ask_menu
+      - slot_was_set:
+          - asked_queue: true
+      - action: action_listen
+
+  - rule: Handle q_price and then order
+    steps:
+      - intent: q_price
+      - action: action_q_price
+      - slot_was_set:
+          - asked_queue: true
+      - action: action_listen
+
+  - rule: Continue order after ask with affirm
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: affirm
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Continue order after ask with provide_temp
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: provide_temp
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Continue order after ask with provide_size
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: provide_size
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Continue order after ask with provide_count
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: provide_count
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Continue order after ask with provide_size_temp
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: provide_size_temp
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Continue order after ask with provide_size_count
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: provide_size_count
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Continue order after ask with provide_temp_count
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: provide_temp_count
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: Continue order after ask with provide_size_temp_count
+    steps:
+      - slot_was_set:
+          - asked_queue: true
+      - intent: provide_size_temp_count
+      - action: action_order_after_ask
+      - action: order_form
+      - active_loop: order_form
+
+  - rule: q menu # 어떤 메뉴가 있나요? 메뉴 목록 요청
+    steps:
+      - intent: q_menu
+      - action : action_q_menu
+      
+  - rule: ask ordered list
+    steps:
+      - intent: q_order
+      - action: action_q_order
+  
+  - rule: change order
+    steps:
+      - intent: change_order
+      - action: action_deactivate_loop
+      - action: action_change_order
+  
+  - rule: cancel order
+    steps:
+      - intent: cancel_order
+      - action: action_deactivate_loop
+      - action: action_cancel_order
+
+  - rule: ask size
+    steps:
+      - intent: q_size
+      - action: utter_q_size
+
+  - rule: continue order form with order_drink
+    condition:
+      - active_loop: order_form
+    steps:
+      - intent: order_drink
+      - action: action_fill_slot_with_order_drink
+      - action: order_form
+      - active_loop: order_form
+
+
+  - rule: cancel_order while order form
+    condition:
+      - active_loop: order_form
+    steps:
+      - intent: cancel_order
+      - action: action_deactivate_loop
+      - action: action_cancel_order
+      - action: order_form
+
+  - rule: change_order while order form
+    condition:
+      - active_loop: order_form
+    steps:
+      - intent: change_order
+      - action: action_deactivate_loop
+      - action: action_change_order
+      - action: order_form
