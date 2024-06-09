@@ -1,0 +1,1104 @@
+[
+  {
+    "text": "라지 사이즈로 하면 얼마지",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "size",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.7984092235565186,
+        "value": "라지",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "여섯잔잔 줘",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "여섯잔",
+        "entity": "count"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "count",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.6930286288261414,
+        "value": "여섯잔잔",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "[라지]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "size",
+        "start": 1,
+        "end": 3,
+        "confidence_entity": 0.5466375350952148,
+        "value": "라지",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "[미디움]으로 부탁",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "size",
+        "start": 1,
+        "end": 4,
+        "confidence_entity": 0.7954279184341431,
+        "value": "미디움",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "아메리카노랑 바닐라아메리카노 주문했는데 바닐라아메리카노는 취소해주세요",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "아메리카노",
+        "entity": "menu",
+        "role": "from",
+        "group": "1"
+      },
+      {
+        "start": 7,
+        "end": 15,
+        "value": "바닐라아메리카노",
+        "entity": "menu",
+        "role": "from",
+        "group": "2"
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "value": "바닐라아메리카노",
+        "entity": "menu",
+        "role": "to",
+        "group": "1"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9898675680160522,
+        "role": "from",
+        "confidence_role": 0.9951560497283936,
+        "group": "1",
+        "confidence_group": 0.9935228824615479,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.8923538327217102,
+        "role": "from",
+        "confidence_role": 0.9288840889930725,
+        "group": "2",
+        "confidence_group": 0.9607272148132324,
+        "value": "바닐라아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 22,
+        "end": 30,
+        "confidence_entity": 0.9618912935256958,
+        "role": "to",
+        "confidence_role": 0.9704713821411133,
+        "group": "2",
+        "confidence_group": 0.9005695581436157,
+        "value": "바닐라아메리카노",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "회사에 급히 가봐야 하니 아메리카노 두 잔 전부 주문 취소하는 걸로 할게요",
+    "entities": [
+      {
+        "start": 14,
+        "end": 19,
+        "value": "아메리카노",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "value": "두",
+        "entity": "count",
+        "group": "1"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.999427318572998,
+        "role": "from",
+        "confidence_role": 0.7650142908096313,
+        "group": "1",
+        "confidence_group": 0.9980233907699585,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 20,
+        "end": 21,
+        "confidence_entity": 0.9978961944580078,
+        "role": "from",
+        "confidence_role": 0.9605271220207214,
+        "group": "1",
+        "confidence_group": 0.9993147850036621,
+        "value": "두",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "아메리카노 두 잔 시켰는데 한 잔 취소해 주세요",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "아메리카노",
+        "entity": "menu",
+        "role": "from",
+        "group": "1"
+      },
+      {
+        "start": 6,
+        "end": 7,
+        "value": "두",
+        "entity": "count",
+        "role": "from",
+        "group": "1"
+      },
+      {
+        "start": 15,
+        "end": 18,
+        "value": "한 잔",
+        "entity": "count",
+        "role": "to",
+        "group": "1"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9997286200523376,
+        "role": "from",
+        "confidence_role": 0.9987245202064514,
+        "group": "1",
+        "confidence_group": 0.9985024929046631,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.5622101426124573,
+        "role": "from",
+        "confidence_role": 0.6958750486373901,
+        "group": "1",
+        "confidence_group": 0.9627814888954163,
+        "value": "두 잔",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 15,
+        "end": 18,
+        "confidence_entity": 0.5089216232299805,
+        "role": "to",
+        "confidence_role": 0.8677976131439209,
+        "group": "1",
+        "confidence_group": 0.892619788646698,
+        "value": "한 잔",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "다 못먹을 것 같아서 블루베리스무디 구매한 거 한 잔은 주문 취소하도록 할게요",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "블루베리스무디",
+        "entity": "menu",
+        "role": "from",
+        "group": "1"
+      },
+      {
+        "start": 26,
+        "end": 29,
+        "value": "한 잔",
+        "entity": "count",
+        "role": "to",
+        "group": "1"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.9780289530754089,
+        "role": "from",
+        "confidence_role": 0.9798418283462524,
+        "group": "1",
+        "confidence_group": 0.9444370865821838,
+        "value": "블루베리스무디",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 22,
+        "end": 23,
+        "confidence_entity": 0.7074166536331177,
+        "role": "to",
+        "confidence_role": 0.9090997576713562,
+        "group": "1",
+        "confidence_group": 0.9625284671783447,
+        "value": "한",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 26,
+        "end": 29,
+        "confidence_entity": 0.8224709033966064,
+        "role": "to",
+        "confidence_role": 0.9430577158927917,
+        "group": "1",
+        "confidence_group": 0.9507845044136047,
+        "value": "한 잔",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "온도는 아이스로할게요",
+    "entities": [
+      {
+        "start": 4,
+        "end": 7,
+        "value": "아이스",
+        "entity": "temp"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "temp",
+        "start": 4,
+        "end": 8,
+        "confidence_entity": 0.6669960021972656,
+        "value": "아이스로",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "저는 아이스로주세요",
+    "entities": [
+      {
+        "start": 3,
+        "end": 6,
+        "value": "아이스",
+        "entity": "temp"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "temp",
+        "start": 3,
+        "end": 7,
+        "confidence_entity": 0.6043124794960022,
+        "value": "아이스로",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "두잔 스몰한거",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "두",
+        "entity": "count"
+      },
+      {
+        "start": 3,
+        "end": 5,
+        "value": "스몰",
+        "entity": "size"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "count",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.8983580470085144,
+        "value": "두잔",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "size",
+        "start": 3,
+        "end": 5,
+        "confidence_entity": 0.9999305009841919,
+        "value": "스몰",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "그거 빅한 걸로 한줘",
+    "entities": [
+      {
+        "start": 3,
+        "end": 4,
+        "value": "빅",
+        "entity": "size"
+      },
+      {
+        "start": 9,
+        "end": 10,
+        "value": "한",
+        "entity": "count"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "size",
+        "start": 3,
+        "end": 4,
+        "confidence_entity": 0.9992367029190063,
+        "value": "빅",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.48088693618774414,
+        "value": "한",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 9,
+        "end": 10,
+        "confidence_entity": 0.8650006651878357,
+        "value": "한",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "아까 따뜻한 아메리카노 주문했는데 아이스로 바꿀 수 있을까요",
+    "entities": [
+      {
+        "start": 3,
+        "end": 6,
+        "value": "따뜻한",
+        "entity": "temp",
+        "role": "from"
+      },
+      {
+        "start": 7,
+        "end": 12,
+        "value": "아메리카노",
+        "entity": "menu",
+        "role": "from"
+      },
+      {
+        "start": 19,
+        "end": 22,
+        "value": "아이스",
+        "entity": "menu",
+        "role": "to"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "temp",
+        "start": 3,
+        "end": 6,
+        "confidence_entity": 0.9077135920524597,
+        "role": "from",
+        "confidence_role": 0.9283198118209839,
+        "value": "따뜻한",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 7,
+        "end": 12,
+        "confidence_entity": 0.9933652281761169,
+        "role": "from",
+        "confidence_role": 0.9973382353782654,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "temp",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.6638910174369812,
+        "role": "to",
+        "confidence_role": 0.9966447353363037,
+        "value": "아이스",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "아이스 카페라떼 3잔, 카페모카 2잔, 헤이즐럿 라떼, 아이스 아메리카노 한잔씩이요.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "아이스",
+        "entity": "temp",
+        "group": "1"
+      },
+      {
+        "start": 4,
+        "end": 8,
+        "value": "카페라떼",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 9,
+        "end": 10,
+        "value": "3",
+        "entity": "count",
+        "group": "1"
+      },
+      {
+        "start": 13,
+        "end": 17,
+        "value": "카페모카",
+        "entity": "menu",
+        "group": "2"
+      },
+      {
+        "start": 18,
+        "end": 19,
+        "value": "2",
+        "entity": "menu",
+        "group": "2"
+      },
+      {
+        "start": 22,
+        "end": 29,
+        "value": "헤이즐럿 라떼",
+        "entity": "menu",
+        "group": "3"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "value": "아이스",
+        "entity": "temp",
+        "group": "4"
+      },
+      {
+        "start": 35,
+        "end": 40,
+        "value": "아메리카노",
+        "entity": "menu",
+        "group": "4"
+      },
+      {
+        "start": 41,
+        "end": 43,
+        "value": "한잔",
+        "entity": "menu",
+        "group": "4"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "temp",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9963942170143127,
+        "group": "1",
+        "confidence_group": 0.9779254198074341,
+        "value": "아이스",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 4,
+        "end": 8,
+        "confidence_entity": 0.956043541431427,
+        "group": "1",
+        "confidence_group": 0.9397965669631958,
+        "value": "카페라떼",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 9,
+        "end": 10,
+        "confidence_entity": 0.5589554905891418,
+        "group": "1",
+        "confidence_group": 0.9448294639587402,
+        "value": "3",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 13,
+        "end": 17,
+        "confidence_entity": 0.999133288860321,
+        "group": "2",
+        "confidence_group": 0.9790663123130798,
+        "value": "카페모카",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 18,
+        "end": 19,
+        "confidence_entity": 0.8889524936676025,
+        "group": "2",
+        "confidence_group": 0.9327431917190552,
+        "value": "2",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.9432530403137207,
+        "group": "3",
+        "confidence_group": 0.8361169695854187,
+        "value": "헤이즐럿 라떼",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "temp",
+        "start": 31,
+        "end": 34,
+        "confidence_entity": 0.9907194972038269,
+        "group": "4",
+        "confidence_group": 0.8895393013954163,
+        "value": "아이스",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 35,
+        "end": 40,
+        "confidence_entity": 0.9935547709465027,
+        "group": "4",
+        "confidence_group": 0.7502010464668274,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 41,
+        "end": 43,
+        "confidence_entity": 0.9304025769233704,
+        "group": "4",
+        "confidence_group": 0.9025170207023621,
+        "value": "한잔",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "바나나주스 라지사이즈로 하나 주세요.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "바나나주스",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 6,
+        "end": 8,
+        "value": "라지",
+        "entity": "size",
+        "group": "1"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9962378740310669,
+        "group": "1",
+        "confidence_group": 0.978902280330658,
+        "value": "바나나주스",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "size",
+        "start": 6,
+        "end": 8,
+        "confidence_entity": 0.9995762705802917,
+        "group": "1",
+        "confidence_group": 0.9965860843658447,
+        "value": "라지",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 13,
+        "end": 15,
+        "confidence_entity": 0.656154453754425,
+        "group": "1",
+        "confidence_group": 0.7871075868606567,
+        "value": "하나",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "카페라떼 두잔 아메리카노 한잔줘",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "카페라떼",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 5,
+        "end": 6,
+        "value": "두",
+        "entity": "count",
+        "group": "1"
+      },
+      {
+        "start": 8,
+        "end": 13,
+        "value": "아메리카노",
+        "entity": "menu",
+        "group": "2"
+      },
+      {
+        "start": 14,
+        "end": 16,
+        "value": "한잔",
+        "entity": "count",
+        "group": "2"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9920175075531006,
+        "group": "1",
+        "confidence_group": 0.988175630569458,
+        "value": "카페라떼",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.8088480234146118,
+        "group": "1",
+        "confidence_group": 0.9444059133529663,
+        "value": "두잔",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.790353536605835,
+        "group": "2",
+        "confidence_group": 0.9820276498794556,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 14,
+        "end": 16,
+        "confidence_entity": 0.978532075881958,
+        "group": "2",
+        "confidence_group": 0.9604471921920776,
+        "value": "한잔",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "카페라떼 따뜻한거 두잔이랑 밀크티 차갑게 해서 세잔이요",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "카페라떼",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 5,
+        "end": 8,
+        "value": "따뜻한",
+        "entity": "temp",
+        "group": "1"
+      },
+      {
+        "start": 10,
+        "end": 11,
+        "value": "두",
+        "entity": "count",
+        "group": "1"
+      },
+      {
+        "start": 15,
+        "end": 18,
+        "value": "밀크티",
+        "entity": "menu",
+        "group": "2"
+      },
+      {
+        "start": 19,
+        "end": 22,
+        "value": "차갑게",
+        "entity": "temp",
+        "group": "2"
+      },
+      {
+        "start": 26,
+        "end": 27,
+        "value": "세",
+        "entity": "menu",
+        "group": "2"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9942817687988281,
+        "group": "1",
+        "confidence_group": 0.991519033908844,
+        "value": "카페라떼",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "temp",
+        "start": 5,
+        "end": 8,
+        "confidence_entity": 0.9670335650444031,
+        "group": "1",
+        "confidence_group": 0.966358482837677,
+        "value": "따뜻한",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 10,
+        "end": 12,
+        "confidence_entity": 0.6336628198623657,
+        "group": "1",
+        "confidence_group": 0.9038451910018921,
+        "value": "두잔",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 15,
+        "end": 18,
+        "confidence_entity": 0.9945260882377625,
+        "group": "2",
+        "confidence_group": 0.9783041477203369,
+        "value": "밀크티",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "temp",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9590052962303162,
+        "group": "2",
+        "confidence_group": 0.9711887836456299,
+        "value": "차갑게",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 26,
+        "end": 27,
+        "confidence_entity": 0.845238983631134,
+        "group": "2",
+        "confidence_group": 0.9668301343917847,
+        "value": "세",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "우리 아이 먹일 따뜻한 아메리카노 세잔 주세요",
+    "entities": [
+      {
+        "start": 9,
+        "end": 12,
+        "value": "따뜻한",
+        "entity": "temp",
+        "group": "1"
+      },
+      {
+        "start": 13,
+        "end": 18,
+        "value": "아메리카노",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 19,
+        "end": 21,
+        "value": "세잔",
+        "entity": "count",
+        "group": "1"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.6293901801109314,
+        "group": "1",
+        "confidence_group": 0.9903790950775146,
+        "value": "우리",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "temp",
+        "start": 3,
+        "end": 8,
+        "confidence_entity": 0.792336106300354,
+        "group": "1",
+        "confidence_group": 0.9435648918151855,
+        "value": "아이 먹일",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "temp",
+        "start": 9,
+        "end": 12,
+        "confidence_entity": 0.6921206116676331,
+        "group": "1",
+        "confidence_group": 0.9205631017684937,
+        "value": "따뜻한",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 13,
+        "end": 18,
+        "confidence_entity": 0.9498370885848999,
+        "group": "1",
+        "confidence_group": 0.8707825541496277,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 19,
+        "end": 21,
+        "confidence_entity": 0.9977172613143921,
+        "group": "1",
+        "confidence_group": 0.9960922598838806,
+        "value": "세잔",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "아이스아메리카노 하나랑 딸기라떼 두잔이요",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "아이스",
+        "entity": "temp",
+        "group": "1"
+      },
+      {
+        "start": 3,
+        "end": 8,
+        "value": "아메리카노",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 9,
+        "end": 11,
+        "value": "하나",
+        "entity": "count",
+        "group": "1"
+      },
+      {
+        "start": 13,
+        "end": 17,
+        "value": "딸기라떼",
+        "entity": "menu",
+        "group": "2"
+      },
+      {
+        "start": 18,
+        "end": 20,
+        "value": "두잔",
+        "entity": "menu",
+        "group": "2"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "temp",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9613891839981079,
+        "group": "1",
+        "confidence_group": 0.9964152574539185,
+        "value": "아이스",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 3,
+        "end": 8,
+        "confidence_entity": 0.9929787516593933,
+        "group": "1",
+        "confidence_group": 0.9959419369697571,
+        "value": "아메리카노",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 9,
+        "end": 11,
+        "confidence_entity": 0.986034631729126,
+        "group": "1",
+        "confidence_group": 0.9993789196014404,
+        "value": "하나",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "menu",
+        "start": 13,
+        "end": 17,
+        "confidence_entity": 0.9680018424987793,
+        "group": "2",
+        "confidence_group": 0.9734569787979126,
+        "value": "딸기라떼",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 18,
+        "end": 20,
+        "confidence_entity": 0.5774235129356384,
+        "group": "2",
+        "confidence_group": 0.9707735776901245,
+        "value": "두잔",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "카페라떼 한잔 따뜻하게 주세요.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "카페라떼",
+        "entity": "menu",
+        "group": "1"
+      },
+      {
+        "start": 5,
+        "end": 7,
+        "value": "한잔",
+        "entity": "count",
+        "group": "1"
+      },
+      {
+        "start": 8,
+        "end": 10,
+        "value": "따뜻",
+        "entity": "temp",
+        "group": "1"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "menu",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.993354082107544,
+        "group": "1",
+        "confidence_group": 0.9950203895568848,
+        "value": "카페라떼",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "count",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9932323694229126,
+        "group": "1",
+        "confidence_group": 0.9990673661231995,
+        "value": "한잔",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "temp",
+        "start": 8,
+        "end": 12,
+        "confidence_entity": 0.5774067044258118,
+        "group": "1",
+        "confidence_group": 0.8048927783966064,
+        "value": "따뜻하게",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

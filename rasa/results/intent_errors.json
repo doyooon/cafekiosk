@@ -1,0 +1,34 @@
+[
+  {
+    "text": "안녕하세요 메뉴좀 볼 수 있을까요",
+    "intent": "q_menu",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.584165096282959
+    }
+  },
+  {
+    "text": "메뉴판좀 보고 싶은데 가능할 까요",
+    "intent": "q_menu",
+    "intent_prediction": {
+      "name": "provide_count",
+      "confidence": 0.40231049060821533
+    }
+  },
+  {
+    "text": "메뉴판 보고 싶어요",
+    "intent": "q_menu",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6360712647438049
+    }
+  },
+  {
+    "text": "바닐라 라떼",
+    "intent": "order_drink",
+    "intent_prediction": {
+      "name": "ask_menu",
+      "confidence": 0.787493884563446
+    }
+  }
+]

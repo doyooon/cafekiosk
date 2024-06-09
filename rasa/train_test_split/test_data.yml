@@ -1,0 +1,947 @@
+version: "2.0"
+nlu:
+- intent: q_trash
+  examples: |
+    - 쓰레기통은 어디있나요
+    - 쓰레기 버리는 곳 어디에요
+    - 쓰레기 버리는 곳 알려주세요
+- intent: q_re_cash_receipts
+  examples: |
+    - 영수증 재발급 부탁드려도 될까요
+    - 영수증 다시 주실 수 있나요
+- intent: q_taken_time
+  examples: |
+    - 음료 나오는 시간은 얼마나 되나요
+    - 음료 나오는 데 얼마나 걸리나요
+- intent: deny_order
+  examples: |
+    - 잘못말했어
+    - 다른거 주문할래
+    - 다른 음료를 주문할래
+- intent: q_k_cash_receipts
+  examples: |
+    - 현금영수증 받을 수 있나요
+    - 현금영수증 필요해요
+    - 현금영수증 처리되나요
+- intent: q_pet
+  examples: |
+    - 애완동물 들여도 되나요
+    - 애완동물 출입 가능한가요
+    - 애완동물 반입 가능해요
+- intent: q_outside_food
+  examples: |
+    - 가져온 음식 먹어도 될까요
+    - 외부 음식 허용되나요
+    - 가져온 음식 먹어도 되나요
+- intent: q_more_cup
+  examples: |
+    - 여분의 컵 부탁드려도 될까요
+    - 컵 하나 더 부탁드려요
+    - 컵 하나 더 받을 수 있을까요
+- intent: q_payment_method
+  examples: |
+    - 결제 방식에는 어떤게 있나요
+    - 결제 방법은 어떤 것들이 있나요
+    - 결제 가능한 방법은 뭐가 있나요
+    - 어떤 결제 방식을 지원하나요
+- intent: q_toilet
+  examples: |
+    - 여기서 화장실 찾으려면 어디로 가야 해요
+    - 화장실 어떻게 가나
+    - 화장실 어디에 있어요
+    - 여기 화장실 어디인가요
+- intent: q_open_close_time
+  examples: |
+    - 영업시간이 언제인가요
+    - 영업시간은 어떻게 되나요
+    - 여는 시간은 언제예요
+    - 운영시간은 어떻게 되나요
+- intent: q_order
+  examples: |
+    - 주문 내역을 알 수 있을까
+    - 내가 어떤 걸 시켰니
+    - 주문내역보여줘
+    - 내가 어떤 음료를 시켰더라
+    - 내가 어떤 걸 주문했지
+    - 장바구니 보여줘
+- intent: greet
+  examples: |
+    - 이보세요
+    - 주문 해도 될까요
+    - 저는 앞이 보이지 않습니다
+    - 헬로
+    - 주문을 하고 싶어
+    - 잠시만요
+- intent: q_size
+  examples: |
+    - 어떤 사이즈들이 있어요
+    - 크기 뭐있어
+    - 사이즈는 뭐가있노
+    - 사이즈는 어떤것들이있나요
+    - 사이즈에는 어떤것들이 있나요
+    - 사이즈는어떤것들이있나요
+    - 사이즈는 어떤 것들이 있나요
+- intent: affirm
+  examples: |
+    - 응 계속 주문할게
+    - 그렇게 해주세요
+    - 그래
+    - 응그래
+    - 그거 주세요
+    - 응더주문할게
+- intent: q_wifi
+  examples: |
+    - 와이파이 쓰려면 어떻게 해야 하나요
+    - 와이파이 어떻게 연결하죠
+    - 와이파이 비번 알려주실래요
+    - 여기 와이파이 되나요
+    - 와이파이
+    - 와이파이 비번 좀 알려주실래요
+    - 와이파이 접속 가능해요
+    - 와이파이 비밀번호 물어봐도 될까요
+- intent: q_lost_item
+  examples: |
+    - 분실물
+    - 잃어버린 물건 문의하려고요
+    - 분실물 맡겨진 게 있나요
+    - 열쇠 습득된 거 있나요
+    - 물건을 잃어버렷어
+    - 카드지갑을 어디에 두고 왔어요
+    - 제가 노트북을 잃어버렸어요
+    - 습득된 분실물 있나요
+    - 잃어버린 물건 찾을 수 있나요
+    - 지갑을 잃어버렸어요
+- intent: q_price
+  examples: |
+    - [바닐라아메리카노]{"entity": "menu", "group": "1"} 총 얼마예요
+    - 크기는 얼마야?
+    - 사이즈 가격은 어떻게 돼?
+    - [아메리카노]{"entity": "menu", "group": "1"} [라지]{"entity": "size", "group": "1"}사이즈로 [두잔]{"entity": "count", "group": "1"}하면 얼만데
+    - [애플주스]{"entity": "menu", "group": "1"}는 [큰]{"entity": "size", "group": "1"}거는 얼마예요
+    - [아메리카노]{"entity": "menu", "group": "1"}는 얼마인가요
+    - [복숭아에이드]{"entity": "menu", "group": "1"}는 가격이 얼마인가요?
+    - [큰]{"entity": "size", "group": "1"} 것은 얼마예요
+    - 라지 사이즈로 하면 얼마지
+    - 총 얼마야?
+    - [딸기초과]{"entity": "menu", "group": "1"} 제일 [작은]{"entity": "size", "group": "1"} 사이즈 얼마에요
+- intent: provide_temp_count
+  examples: |
+    - 그럼 [세잔](count) [차갑게](temp) 줘
+    - [아이스](temp)로 [1](count)잔할게
+    - 전부 [세잔](count)으로 하고 [따뜻한](temp)거 할래
+    - [3](count)잔으로 하고 [따뜻한](temp)거 할래
+    - 그럼 [시원하게](temp) [4](count)잔 줄래요
+    - 그럼 [세잔](count)으로 하고 [따뜻한](temp)거 할래
+    - 전부 [세잔](count) [차갑게](temp) 줘
+    - 그럼 [4](count)잔 [아이스](temp)
+    - 전부 [4](count)잔 [아이스](temp)
+    - 방금 한 거 [시원한](temp) [3](count)잔 주세요
+    - 전부 [시원한](temp) [3](count)잔 주세요
+    - 방금 한 거 [세잔](count)으로 하고 [따뜻한](temp)거 할래
+    - [여덟잔](count) [시원한](temp) 걸로할게
+    - 그럼 [두잔](count) [따듯한](temp)거로 줘
+    - [일곱잔](count) [아이스](temp)
+- intent: provide_size_temp_count
+  examples: |
+    - 아 죄송한데 [한잔](count) [벤티](size) [시원하게](temp) 할게요
+    - [세잔](count)으로 하고 전부 [아이스](temp)에 [스몰](size)로 할게요
+    - 오늘은 입 데기 싫으니까 [아이스](temp)로 주시고 [세잔](count)에 들고가기 편하게 [스몰](size)사이즈로 주세요
+    - 많이 먹어서 조금 먹고 싶은데 [아이스](temp)로 [한잔](count) [스몸](size) 사이즈로 주세요
+    - 그럼 그걸로 해서 [세잔](count)에 [작은](size)걸로 [시원하게](temp) 주십시오
+    - 밖에서 먹으려면 [아이스](temp) [세잔](count) [벤티](size)면 충분할 것 같네요
+    - 안에서 먹으면 그럼 [따듯한](temp)거 [일곱잔](count) [스몰](size) 사이즈 할까요
+    - 많이 먹었더니 탈날 것 같으니 [한잔](count) [따뜻한](temp)거로 [스몰](size) 사이즈 주세요
+    - [아이스](temp) [벤티](size) [다섯잔](count)
+    - 그러면 [벤티](size) 크기로 [두](count)개하고 [뜨거운](temp)거로 할게요
+    - 더워서 [시원한](temp)거로 먹을거고 [벤티](size) [다섯잔](count) 줘
+    - 혼자 맨날 혼자 오니까 [한](count) 잔이라고 생각이 들고 [스몰](size) 사이즈에 날씨는 더우니까 [아이스](temp)로 할게요
+    - 너무 추우니 [따듯한](temp) 거로 주시고 [세잔](count) [스몰](size)로 주시면 될 것 같아요
+    - [스몰](size) 사이즈 할거고 그럼 [7](count)잔에 [아이스](temp)로 하고 싶어요
+- intent: ask_menu
+  examples: |
+    - [카라멜마끼야또]{"entity": "menu", "group": "1"}랑 [흑임자라떼]{"entity": "menu", "group": "2"} 있니
+    - 저기요 혹시 [홍차]{"entity": "menu", "group": "1"} 있어요
+    - [카푸치노]{"entity": "menu", "group": "1"} 라는건 메뉴에 있니
+    - [아메리카노]{"entity": "menu", "group": "1"} 팔아요
+    - [바닐라 라떼]{"entity": "menu", "group": "1"} 있니
+    - 키오스크야 [아이스티]{"entity": "menu", "group": "1"} 있어
+    - [바닐라 라떼]{"entity": "menu", "group": "1"} 재고 확인해 주세요
+    - 혹시나 해서 물어보는데 [카페라떼]{"entity": "menu", "group": "1"}라는게 있나요
+    - 오늘 [아이스티]{"entity": "menu", "group": "1"} 주문 가능해요
+    - 여기 [딸기스무디]{"entity": "menu", "group": "1"}랑 [바나나스무디]{"entity": "menu", "group": "2"}도 파나요
+    - 그 섞어 먹는거 뭐더라 아 그래 그 [망고 스무디]{"entity": "menu", "group": "1"} 있어여
+    - [아이스 라떼]{"entity": "menu", "group": "1"}를 살 수 있는지 모르갰네
+    - 맨날 와서 확인해서 정말 죄송하지만 [아메리카노]{"entity": "menu", "group": "1"}있는지 물어봐도 될까요
+    - [녹차라떼]{"entity": "menu", "group": "1"} 오늘 있나요
+    - 그 먹기 편하면서 쓴거 그 [아메리카노]{"entity": "menu", "group": "1"} 있어
+    - 저희가 항상 먹는게 있는데 [딸기 스무디]{"entity": "menu", "group": "1"}가 있는지 궁금하고 [바나나 스무디]{"entity": "menu", "group": "2"}가 있는지 궁금하네요
+    - 대표님은 항상 먹는거만 먹는데 [흑임자 라떼]{"entity": "menu", "group": "1"} 있나요
+    - 음 그거 뭐지 궁금한게 아 맞다 [에스프레소]{"entity": "menu", "group": "1"} 는 취급을 하나요
+- intent: provide_count
+  examples: |
+    - [7](count)잔주세요
+    - [6](count)잔주세요
+    - [네잔](count)이 필요합니다
+    - [4]count)잔 주세요
+    - [다섯](count)잔주세요
+    - 로봇아 [3](count)잔 괜찮아
+    - [여뎗잔](count)
+    - [7](count)잔 정도는 해야지
+    - [여섯잔](count)잔 줘
+    - [세잔](count) 낭낭하게 담아줘요
+    - [1](count)로 부탁
+    - [8](count)잔
+    - [1](count)잔만 주세요
+    - [2](count)잔으로 해주세요
+    - [3](count)잔이 필요해요
+    - 직원이 너무 좋으니까 [세잔](count) 할게요
+    - 그럼 그걸로 [두잔](count) 주문할께
+    - [4](count)잔이 필요합니다
+    - 전부 [두잔](count)씩 주세요
+    - 엄마가 [2](count)잔 하래요
+    - [6](count)잔 줘
+- intent: q_menu
+  examples: |
+    - 안녕하세요 메뉴좀 볼 수 있을까요
+    - 어떤 종류의 [커피](category)가 있나요
+    - 어떤[티](category)가 있는지 궁금해요
+    - 무슨 [차](category)가 있어요
+    - [티](category) 뭐 있는지 알려줘
+    - 메뉴판좀 보고 싶은데 가능할 까요
+    - [차](category)메뉴를 말해주세요
+    - [에이드](category)메뉴 불러주세요
+    - [티](category)를 마시고 싶은데 어떤게 있나요
+    - [에이드](category)는 뭐가 있어요
+    - [에이드](category)소개해줘
+    - 메뉴가뭐에요
+    - 메뉴판 보고 싶어요
+    - 어떤 것을 파나요
+    - 어떤메뉴가 있나요
+    - 뭘 파나요
+    - [스무디](category)는 뭐가 있어요
+    - [스무디](category) 뭐있는지불러줘
+    - 어떤메뉴를 파나요
+    - [스무디](category)는 어떤 것들이 있나요
+    - [커피](category) 메뉴를 알려주세요
+    - 무슨 [티](category)가 있어요
+    - 어떤 [티](category)를 파는지 말해줘
+- intent: provide_size
+  examples: |
+    - 수분 보충이 많이 필요해서 [벤티](size)할게요
+    - [스몰](size)로 주세요
+    - [라지]
+    - [빅](size)으로 주이소
+    - 우리 애기가 먹을거라서 [빅](size) 사이즈로 주시겠어요
+    - [미디움](size) 사이즈로해주세요
+    - 난 [큰](size)걸로 할래요
+    - [작게](size)할게
+    - 그럼 [미디움](size)으로 부탁드려요
+    - [라지](size)사이즈로 해주세요
+    - 날이 너무 더워서 [벤티](size)로 먹을래요
+    - 좋아 [스몰](size)로 할게
+    - 그럼 [중간](size) 크기로 해주실래요
+    - 네, [큰](size) 사이즈로 해주세요
+    - 그럼 [빅](size) 사이즈로 할래요
+    - [스몰](size) 정도가 가장 적당하더라고요
+    - [스몰](size) 사이즈는 나의 최고의 선택이예요
+    - 배가 너무 불러서 [작은](size) 걸로 할게요
+    - [큰](size)거로 해서 낭낭하게 담아주세요
+    - [벤티](size)는 먹어야 행복해져요
+    - 좋아요, [라지](size)로 주세요
+    - 그럼 [미디움](size) 으로 부탁드려요
+    - [빅](size)사이즈가 좋을거 같아요
+    - 오케이, [스몰](size)로 주세요
+    - [큰](size)거로 할래요
+    - [미디움]으로 부탁
+    - 그럼 [작은](size)걸로 해주세요
+    - 그럼 [미디움](size) 사이즈로 부탁드려요
+    - 좋아 [스몰](size) 크기로 할게
+- intent: cancel_order
+  examples: |
+    - [바닐라스무디]{"entity": "menu", "role": "from", "group": "1"} 주문 했던거 취소할 수 있을까요
+    - [아메리카노]{"entity": "menu", "role": "from", "group": "1"}랑 [바닐라아메리카노]{"entity": "menu", "role": "from", "group": "2"} 주문했는데 [바닐라아메리카노]{"entity": "menu", "role": "to", "group": "1"}는 취소해주세요
+    - [차가운]{"entity": "temp", "role": "from", "group": "1"} [아메리카노]{"entity": "menu", "role": "from", "group": "1"} [두 잔]{"entity": "count", "role": "from", "group": "1"} 주문했는데 [한 잔]{"entity": "count", "role": "to", "group": "1"}은 주문 취소하도록 할게요
+    - [아메리카노]{"entity": "menu", "role": "from", "group": "1"}만 취소해주세요
+    - 회사에 급히 가봐야 하니 [아메리카노]{"entity": "menu", "group": "1"} [두]{"entity": "count", "group": "1"} 잔 전부 주문 취소하는 걸로 할게요
+    - 아까 주문한 [홍차]{"entity": "menu", "role": "from", "group": "1"} 취소해 주실 수 있나요
+    - [따뜻한]{"entity": "temp", "role": "from", "group": "1"} [아메리카노]{"entity": "menu", "role": "from", "group": "1"}는 그냥 주문 취소하려고요
+    - [초코스무디]{"entity": "menu", "role": "from", "group": "1"} [두]{"entity": "count", "role": "from", "group": "1"} 개랑 [디카페인바닐라아메리카노]{"entity": "menu", "role": "from", "group": "2"} [두]{"entity": "count", "role": "from", "group": "2"} 개 주문했는데 그거 다 취소가능한가요
+    - [디카페인바닐라아메리카노]{"entity": "menu", "role": "from", "group": "1"}이 먹어보니 너무 느끼해서 취소해 주세요
+    - [아메리카노]{"entity": "menu", "role": "from", "group": "1"}랑 [유자차]{"entity": "menu", "role": "from", "group": "2"} 주문했는데 [유자차]{"entity": "menu", "role": "to", "group": "2"}는 취소해주세요
+    - [카페모카]{"entity": "menu", "role": "from", "group": "1"} 주문 한거 그냥 취소 하고 싶어요
+    - [밀크티]{"entity": "menu", "role": "from", "group": "1"} 취소할 수 있나요
+    - 주문한 음료 중에 [아메리카노]{"entity": "menu", "role": "from", "group": "1"} [한잔]{"entity": "count", "role": "from", "group": "1"}만 취소해주세요
+    - [아메리카노]{"entity": "menu", "role": "from", "group": "1"} [두]{"entity": "count", "role": "from", "group": "1"} 잔 시켰는데 [한 잔]{"entity": "count", "role": "to", "group": "1"} 취소해 주세요
+    - 방금 주문했는데 취소되죠
+    - 돈이 모자라서 [허니자몽블랙티]{"entity": "menu", "role": "from", "group": "1"} [하나]{"entity": "count", "role": "from", "group": "1"}는 취소해 주세요
+    - [딸기스무디]{"entity": "menu", "role": "from", "group": "1"} 빼겠습니다
+    - 아까 [딸기주스]{"entity": "menu", "role": "from", "group": "1"} [한 잔]{"entity": "count", "role": "from", "group": "1"}에 [키위주스]{"entity": "menu", "role": "from", "group": "2"} [한 잔]{"entity": "count", "role": "from", "group": "2"} 주문했거든요 그 중에서 [딸기주스]{"entity": "menu", "role": "to", "group": "1"}만 취소할 수 있을까요
+    - 주문 취소할래요
+    - 조금 전에 [망고스무디]{"entity": "menu", "role": "from", "group": "1"} 주문했는데 취소 아직 할 수 있죠
+    - 모든 주문을 없앨래
+    - 돈이 조금 부족해서 [사과에이드]{"entity": "menu", "role": "from", "group": "1"} [하나]{"entity": "count", "role": "from", "group": "1"}는 주문취소 할게요
+    - 다 못먹을 것 같아서 [블루베리스무디]{"entity": "menu", "role": "from", "group": "1"} 구매한 거 [한 잔]{"entity": "count", "role": "to", "group": "1"}은 주문 취소하도록 할게요
+    - 아까 [아메리카노]{"entity": "menu", "role": "from", "group": "1"} [3]{"entity": "count", "role": "from", "group": "1"}잔 시켰는데 혹시 [1]{"entity": "count", "role": "to", "group": "1"}잔은 취소할 수 있나요
+    - 아까 주문한 [카페 라떼]{"entity": "menu", "role": "from", "group": "1"}는 취소하겠습니다
+    - [캐모마일]{"entity": "menu", "role": "from", "group": "1"} [1]{"entity": "count", "role": "from", "group": "1"}개만 취소해주세요
+    - 아까 주문했던 [얼그레이티]{"entity": "menu", "role": "from", "group": "1"} [두]{"entity": "count", "role": "from", "group": "1"} 개 중에서 [하나]{"entity": "count", "role": "to", "group": "1"}만 취소 부탁드릴게요
+    - 아까 주문한 [딸기스무디]{"entity": "menu", "role": "from", "group": "1"}는 취소할게요
+    - [키위주스]{"entity": "menu", "role": "from", "group": "1"} [한잔]{"entity": "count", "role": "from", "group": "1"} 주문한거 취소할 수 있나요
+    - [카페라떼]{"entity": "menu", "role": "from", "group": "1"}랑 [아메리카노]{"entity": "menu", "role": "from", "group": "2"} 주문했었는데 [아메리카노]{"entity": "menu", "role": "to", "group": "2"} [두잔]{"entity": "count", "role": "to", "group": "2"} 주문취소 해주세요
+    - [딸기바나나]{"entity": "menu", "role": "from", "group": "1"} [한]{"entity": "count", "role": "from", "group": "1"} 잔은 빼주세요
+    - [바나나주스]{"entity": "menu", "role": "from", "group": "1"} [한 잔]{"entity": "count", "role": "from", "group": "1"}이랑 [키위주스]{"entity": "menu", "role": "from", "group": "2"} [한 잔]{"entity": "count", "role": "from", "group": "2"}이랑 [딸기주스]{"entity": "menu", "role": "from", "group": "3"} [한 잔]{"entity": "count", "role": "from", "group": "3"} 주문했는데 전부 주문 취소 가능한가요
+    - [아메리카노]{"entity": "menu", "role": "from", "group": "1"} [3]{"entity": "count", "role": "from", "group": "1"}잔중 [1]{"entity": "count", "role": "to", "group": "1"}잔 취소해주세요
+    - [블루베리스무디]{"entity": "menu", "role": "from", "group": "1"}는 취소해주세요
+    - [바나나 스무디]{"entity": "menu", "role": "from", "group": "1"}는 주문 취소할게요
+    - [블루베리스무디]{"entity": "menu", "role": "from", "group": "1"} [1]{"entity": "count", "role": "from", "group": "1"}개랑 [아메리카노]{"entity": "menu", "role": "from", "group": "2"} [2]{"entity": "count", "role": "from", "group": "2"}잔 주문했는데, 너무 많은 거 같아서 [아메리카노]{"entity": "menu", "role": "to", "group": "2"} [1]{"entity": "count", "role": "to", "group": "2"}잔은 취소부탁드립니다
+- intent: provide_temp
+  examples: |
+    - [핫](temp)로 할래요
+    - 아이스 말고 [따뜻하게](temp) 주세요
+    - 저는 [뜨거운](temp)것이 좋겠어
+    - 그럼 [차가운](temp)거로
+    - 따뜻하게 말고 [아이스](temp)로 주세요
+    - 핫 말고 [차갑게](temp) 주세요
+    - 그럼 [뜨거운](temp) 거로
+    - 따뜻하게말고 [차갑게](temp) 주세요
+    - 시원한거 말고 [따뜻하게](temp) 주세요
+    - 차가운거말고 [뜨겁게](temp) 주세요
+    - 따뜻하게 말고 [시원하게](temp) 주세요
+    - 오늘은 온도는 [아이스](temp)로할게요
+    - 오늘은 [뜨겁게](temp)해
+    - 뜨겁게 말고 [시원하게](temp) 주세요
+    - 저는 [뜨겁게](temp)해
+    - 오늘은 [뜨거운](temp)것이 좋겠어
+    - 뜨겁게 말고 [차가운거](temp)로 주세요
+    - [차갑게](temp) 해주세요
+    - 그럼 [따뜻하게](temp)해줘
+    - [핫](temp)로할래요
+    - 밖에서 좀 놀았더니 [시원한](temp)게 먹고 싶어요
+    - 온도는 [아이스](temp)로할게요
+    - 따뜻하게 말고 [차가운거](temp)로 주세요
+    - 시원한거 말고 [뜨겁게](temp) 주세요
+    - [뜨거운](temp) 거로
+    - 저는 [아이스](temp)로주세요
+    - 그럼 [뜨겁게](temp)해
+    - 그럼 [아이스로](temp)할래요
+    - 시원한거말고 [뜨거운거](temp)로 주세요
+    - 그럼 [핫](temp)으로할래요
+    - 저는 [뜨겁게](temp)해줘
+    - 저는 [아이스로](temp)할래요
+    - 나이가 많아서 [뜨거운](temp)게 좋아
+    - 방금 [시원하게](temp) 라고 했어
+    - 저는 [따뜻한](temp)음료로 준비해주세요
+    - 그럼 [뜨겁게](temp)해줘
+    - 오늘은 [뜨거운](temp) 거로
+    - 오늘은 [핫](temp)으로 할래요
+    - 핫 말고 [차가운거](temp)로 주세요
+    - 그럼 [뜨겁게](temp)해주세요
+    - 내가 열이 너무 많아서 [아이스](temp)로 할게
+    - 저는 [차가운](temp)거로
+    - 오늘은 [차가운](temp)걸로해주세요
+    - 저는 [뜨거운](temp) 거로
+    - [뜨겁게](temp)해줘
+    - [아이스로](temp) 할래요
+    - 오늘은 [뜨거운](temp)거로 할래요
+    - 그럼 [차갑게](temp) 해주세요
+    - 뜨겁게말고 [차갑게](temp) 주세요
+    - 그럼 [아이스로](temp)할게요
+    - 뜨겁게말고 [아이스](temp)로 주세요
+    - [따뜻하게](temp) 해줘
+    - [차가운](temp)거로
+    - 그럼 [시원하게](temp)해줘
+    - 요즘 날씨에 [아이스](temp) 만한게 없지
+    - 이 날씨에 [시원한](temp)거 먹어야지
+- intent: provide_size_count
+  examples: |
+    - 방금 한 거 [한잔](count) 하고 [작은](size)걸로 할게요
+    - 방금 한 거 [빅](size) [하나](count) 주실래요
+    - 방금 한 거 [벤티](size)로 [세잔](count) 주세요
+    - 방금 한 거 [두개](count) 하고 [기본](size)거로 할래
+    - 방금 한 거 [중간](size)거로 하고 [다섯잔](count)할게요
+    - 전부 [넷](count) 하고 [라지](size)한 거로 할래
+    - 방금 한 거 [라지](size) 사이즈로 하고 [다섯잔](count)할래
+    - 그럼 [크게](size) [한잔](count) 주세요
+    - 방금 한 거 [여섯잔](count) 하고 [미디움](size) 크기로 할게요
+    - 방금 한 거 [그란데](size)로 하고 [두](count)할래
+    - 음 그럼 [빅](size)걸로 [다섯잔](count) 주실래요
+    - 그럼 [일곱잔](count) [스몰](size)로 주세요
+    - 음 [열잔](count) [작은](size) 사이즈로 줘
+    - 그럼 [미디움](size)걸로 [일곱잔](count) 주실래요
+    - 그거 [열잔](count) [기본](size) 사이즈로 줘
+    - [두](count)잔 [스몰](size)한거
+    - 방금 한 거 [벤티](size) 크기로 [두잔](count) 주실래요
+    - 음 그럼 [기본](size) 사이즈로 [다섯잔](count) 주실래요
+    - 음 [중간](size) 사이즈로 [여섯잔](count)줘
+    - 방금 한 거 [스몰](size) 한 걸로 하고 [열잔](count)할게요
+    - 전부 [셋](count) 하고 [빅](size)거로 할래
+    - 전부 [두잔](count) 하고 [큰](size)거로 할래
+    - 그럼 [두](count) [라지](size) 크기로 주실래요
+    - 방금 한 거 [중간](size) 사이즈로 [하나](count) 주실래요
+    - 방금 한 거 [스몰](size)인걸로 [네잔](count) 주실래요
+    - 방금 한 거 [셋](count) 하고 [기본](size) 크기로 할래
+    - 방금 한 거 [열잔](count) [작은](size)걸로 주실래요
+    - 방금 한 거 [한잔](count) 하고 [라지](size)한 거로 할래
+    - 그거 [하나](count) [기본](size)거로 줘
+    - 그거 [라지](size) 사이즈로 [다섯잔](count)줘
+    - 방금 한 거 [미디움](size) 사이즈로 하고 [여덟잔](count)할게요
+    - 방금 한 거 [세잔](count) [중간](size)거로 주실래요
+    - 전부 [일곱잔](count) 하고 [기본](size) 크기로 할래
+    - 음 그럼 [셋](count) [크게](size) 사이즈로 주실래요
+    - 음 [두잔](count) [스몰](size) 사이즈로 줘
+    - [여덟잔](count) [미디움](size)
+    - 방금 한 거 [빅](size)걸로 하고 [다섯잔](count)할래
+    - 방금 한 거 [빅](size) 크기로 하고 [한개](count)할래
+    - 방금 한 거 [넷](count) 잔 [기본](size) 사이즈로 주실래요
+    - 음 [작은](size)걸로 [열잔](count)줘
+    - 음 그럼 [열잔](count) [작은](size)거로 주세요
+    - 그럼 [다섯잔](count) [라지](size)로 주실래요
+    - 음 [미디움](size) 사이즈로 [일곱잔](count)줘
+    - 전부 [기본](size)인거로 하고 [여섯잔](count)할래
+    - 방금 한 거 [두개](count) [큰](size)거로 주세요
+    - 그럼 [한개](count) [큰](size) 사이즈로 주실래요
+    - 그럼 [세잔](count) [스몰](size) 크기로 주실래요
+    - 그럼 [한잔](count) [큰](size)거로 주세요
+    - 음 그럼 [빅](size)거로 [한](count)주세요
+    - 음 [아홉잔](count) [스몰](size) 한 걸로 줘
+    - 그럼 [하나](count) [벤티](size) 크기로 주실래요
+    - 그거 [빅](size)한 걸로 [한](count)줘
+    - 그럼 [라지](size) 크기로 [한잔](count) 주실래요
+    - 그거 [한](count) [벤티](size) 사이즈로 줘
+    - 그거 [두잔](count) [미디움](size) 크기로 줘
+    - [중간](size)거 [한잔](count)
+    - 방금 한 거 [작은](size) 크기로 하고 [한개](count)할게요
+    - 전부 [크게](size)인거로 하고 [한잔](count)할래
+    - 방금 한 거 [한잔](count) [라지](size)인 거로 주세요
+    - 음 [스몰](size) 크기로 [다섯잔](count)줘
+    - 그거 [라지](size)인거로 [열잔](count)줘
+    - 방금 한 거 [작은](size)걸로 하고 [하나](count)할게요
+    - 그거 [스몰](size) 크기로 [세잔](count)줘
+    - 그럼 [크게](size)해서 [세잔](count) 주실래요
+    - 방금 한 거 [기본](size)으로 하고 [네잔](count)할래
+    - 방금 한 거 [중간](size)거로 하고 [여덟잔](count)할게요
+    - 그거 [기본](size) 사이즈로 [한잔](count)줘
+    - 그거 [한잔](count) [스몰](size)인걸로 줘
+    - [큰](size) 거 [하나](count)
+    - 방금 한 거 [한잔](count) [중간](size) 사이즈로 주실래요
+    - 방금 한 거 [넷](count) 하고 [라지](size) 크기로 할게요
+    - 전부 [큰](size)거로 하고 [두개](count)할래
+    - 방금 한 거 [여덟잔](count) 하고 [미디움](size) 할게요
+- intent: change_order
+  examples: |
+    - [캐모마일 티]{"entity": "menu", "role": "from"} [따뜻하게]{"entity": "temp", "role": "from"} 말고 [차가운]{"entity": "temp", "role": "to"} 걸로 바꿔도 되나요
+    - [복숭아에이드]{"entity": "menu", "role": "from"}를 [키위에이드]{"entity": "menu", "role": "to"}로 바꿀 수 있나요
+    - [자몽피치 티]{"entity": "menu", "role": "from"} 대신에 [로즈힙 티]{"entity": "menu", "role": "to"}로 바꿀 수 있을까요
+    - [복숭아에이드]{"entity": "menu", "role": "from"} 말고 [키위에이드]{"entity": "menu", "role": "to"}로 주세요
+    - [딸기 주스]{"entity": "menu", "role": "from"} 주문했는데 [망고 주스]{"entity": "menu", "role": "to"}로 변경해 주세요
+    - [레몬 티]{"entity": "menu", "role": "from"} [한]{"entity": "count", "role": "from"} 박스 주문한거 [두]{"entity": "count", "role": "to"} 박스로 바꿀 수 있어요
+    - [자몽 티]{"entity": "menu", "role": "from"}말고 [자몽 차]{"entity": "menu", "role": "to"}로 주세요
+    - [레몬 차]{"entity": "menu", "role": "from"} 주문한 것 [레몬 티]{"entity": "menu", "role": "to"}로 바꿀 수 있나요
+    - [유자차]{"entity": "menu", "role": "from"} [라지]{"entity": "size", "role": "to"}로 사이즈 변경할게요
+    - 아까 홍시 [복숭아에이드]{"entity": "menu", "role": "from"} [하나]{"entity": "count", "role": "from"} 주문했는데 [망고에이드]{"entity": "menu", "role": "to"}로 바꾸고 싶어요
+    - [복숭아 아이스티]{"entity": "menu", "role": "from"}에서 [피치 레몬티]{"entity": "menu", "role": "to"}로 주문 변경할게요
+    - [키위에이드]{"entity": "menu", "role": "from"} 말고 [사과에이드]{"entity": "menu", "role": "to"}로 변경 가능한가요
+    - [오렌지주스]{"entity": "menu", "role": "from"} [한]{"entity": "count", "role": "from"} 잔 주문했는데 [딸기주스]{"entity": "menu", "role": "to"}로 변경해도 되나요
+    - [복숭 아아이스티]{"entity": "menu", "role": "from"} 주문 한 것 같은데 [연유 라떼]{"entity": "menu", "role": "to"}로 변경 할게요
+    - [블루베리 스무디]{"entity": "menu", "role": "from"} 주문 했는데 혹시 [망고 스무디]{"entity": "menu", "role": "to"}로 넣어주실 수 있나요
+    - [바닐라 라떼]{"entity": "menu", "role": "from"} 말고 [카라멜 마끼야또]{"entity": "menu", "role": "to"}으로 주세요
+    - 일행이 [블루베리티]{"entity": "menu", "role": "from"}은 알레르기 때문에 못 먹는다고 해서 [바닐라스무디]{"entity": "menu", "role": "to"}으로 바꾸도록 하겠습니다
+    - [바나나주스]{"entity": "menu", "role": "from"} 사이즈를 [라지]{"entity": "size", "role": "to"}로 바꿔주세요
+    - [바나나스무디]{"entity": "menu", "role": "from"}를 [딸기스무디]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [캐모마일 티]{"entity": "menu", "role": "from"} 주문한 거 [캐모마일]{"entity": "menu", "role": "to"}로 변경 가능해요
+    - [아메리카노]{"entity": "menu", "role": "from"} [두]{"entity": "count", "role": "from"} 잔 시켰는데 [한]{"entity": "count", "role": "to"} 잔 [초코라떼]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [자몽에이드]{"entity": "menu", "role": "from"}는 제가 [뜨겁게]{"entity": "temp", "role": "from"} 달라고 요청드렸는데 그냥 [차갑게]{"entity": "temp", "role": "to"} 주세요
+    - [블루베리티]{"entity": "menu", "role": "from"} 아직 안 만드셨으면 [로즈힙티]{"entity": "menu", "role": "to"}로 바꿔주시겠어요
+    - [아메리카노]{"entity": "menu", "role": "from"} 안하고 [카페라떼]{"entity": "menu", "role": "to"}로 변경 부탁드려요
+    - [디카페인헤이즐넛아메리카노]{"entity": "menu", "role": "from"} 대신 [디카페인바닐라아메리카노]{"entity": "menu", "role": "to"}로 만들어주실 수 있나요
+    - [모카라떼]{"entity": "menu", "role": "from"} [한]{"entity": "count", "role": "from"} 잔 했던거 취소하고 [딸기라떼]{"entity": "menu", "role": "to"} [세]{"entity": "count", "role": "to"} 잔으로 주문할게요
+    - [아이스]{"entity": "temp", "role": "from"} [아메리카노]{"entity": "menu", "role": "from"} [두]{"entity": "count", "role": "from"} 잔 주문했는데 [핫]{"entity": "temp", "role": "to"}으로 바꿔주세요
+    - [따뜻한]{"entity": "temp", "role": "from"} [연유라떼]{"entity": "menu", "role": "from"} 말고 [바닐라라떼]{"entity": "menu", "role": "to"}로 바꿀 수 있나요
+    - [바나나주스]{"entity": "menu", "role": "from"}는 [미디움]{"entity": "size", "role": "from"}에서 [라지]{"entity": "size", "role": "to"}로 바꿔주세요
+    - [복숭아 에이드]{"entity": "menu", "role": "from"} [하나]{"entity": "count", "role": "from"}를 [망고 에이드]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [바나나스무디]{"entity": "menu", "role": "from"} [세잔]{"entity": "count", "role": "from"}했었는데 그중 [두잔]{"entity": "count", "role": "to"}을 [바닐라아메리카노]{"entity": "menu", "role": "to"} [차가운]{"entity": "temp", "role": "to"}거로 변경해줘
+    - 아까 [따뜻한]{"entity": "temp", "role": "from"} [아메리카노]{"entity": "menu", "role": "from"} 주문했는데 [아이스]{"entity": "menu", "role": "to"}로 바꿀 수 있을까요
+    - [카페 모카]{"entity": "menu", "role": "from"} 주문했는데 [크림아트 라떼]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [따뜻한]{"entity": "temp", "role": "from"} [체리에이드]{"entity": "menu", "role": "from"} 말고 [아이스]{"entity": "temp", "role": "to"}로 주세요
+    - [녹차]{"entity": "menu", "role": "from"} [뜨거운]{"entity": "temp", "role": "from"} 거 주문했는데 [차가운]{"entity": "temp", "role": "to"} 걸로 바꿔도 돼요
+    - 저 [밀크티]{"entity": "menu", "role": "from"}를 [녹차]{"entity": "menu", "role": "to"}로 바꾸고 싶은데 가능할까요
+    - [초코스무디]{"entity": "menu", "role": "from"}로 주문했는데 [바닐라스무디]{"entity": "menu", "role": "to"}로 변경할 수 있나요
+    - [아메리카노]{"entity": "menu", "role": "from"} 주문했는데 [에스프레소]{"entity": "menu", "role": "to"}로 바꿀게요
+    - [아메리카노]{"entity": "menu", "role": "from"} 주문했는데 [바닐라 아메리카노]{"entity": "menu", "role": "to"}로 변경해 주세요
+    - [허니 자몽 블랙티]{"entity": "menu", "role": "from"}를 [아이스]{"entity": "temp", "role": "to"}로 바꿀 수 있습니까
+    - [아메리카노]{"entity": "menu", "role": "from"} [벤티]{"entity": "size", "role": "to"} 사이즈로 변경할 수 있나요
+    - [체리에이드]{"entity": "menu", "role": "from"}을 [오렌지주스]{"entity": "menu", "role": "to"}으로 변경해 주세요
+    - [얼그레이 티]{"entity": "menu", "role": "from"} [한]{"entity": "count", "role": "from"} 잔 주문했던 거 [얼그레이]{"entity": "menu", "role": "to"}로 변경해주세요
+    - [체리 에이드]{"entity": "menu", "role": "from"} [두]{"entity": "count", "role": "from"} 개 시켰는데 [하나]{"entity": "count", "role": "to"}는 [자몽 주스]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [아이스]{"entity": "temp", "role": "from"}[밀크티]{"entity": "menu", "role": "from"} 시켰는데 [아이스]{"entity": "temp", "role": "to"}[연유라떼]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [캐모바일 티]{"entity": "menu", "role": "from"}는 취소하고 [캐모바일]{"entity": "menu", "role": "to"}로 바꿀게요
+    - [로즈힙티]{"entity": "menu", "role": "from"} [톨]{"entity": "size", "role": "from"} 사이즈로 주문했는데 [벤티]{"entity": "size", "role": "to"}사이즈로 변경 가능한가요
+    - [딸기 스무디]{"entity": "menu", "role": "from"}이 가격이 비싸져서 그냥 [바나나 스무디]{"entity": "menu", "role": "to"}로 바꾸겠습니다
+    - [피치레몬티]{"entity": "menu", "role": "from"} 대신 [로즈힙티]{"entity": "menu", "role": "to"}로 변경해주세요
+    - [아이스]{"entity": "temp", "role": "from"}[아메리카노]{"entity": "menu", "role": "from"} 했는데 [핫]{"entity": "temp", "role": "to"}으로 바꾸고 싶어요
+    - [딸기라떼]{"entity": "menu", "role": "from"} 말고 [오렌지주스]{"entity": "menu", "role": "to"}로 변경할 수 있나요
+    - [바닐라스무디]{"entity": "menu", "role": "from"} [1]{"entity": "count", "role": "from"}개는 [초코스무디]{"entity": "menu", "role": "to"}로 변경해주세요
+    - [모카 라떼]{"entity": "menu", "role": "from"}로 시켰는데 [카페 라떼]{"entity": "menu", "role": "to"}로 변경해주세요
+    - 아까 [아이스]{"entity": "temp", "role": "from"} [바닐라라떼]{"entity": "menu", "role": "from"} 주문한 거 [아이스]{"entity": "temp", "role": "to"} [바닐라아메리카노]{"entity": "menu", "role": "to"}로 변경해도 될까요
+    - [바나나 스무디]{"entity": "menu", "role": "from"} 말고 [딸기 스무디]{"entity": "menu", "role": "to"}로 바꿀게요
+    - 혹시 [모카 라떼]{"entity": "menu", "role": "from"}에서 [딸기 라떼]{"entity": "menu", "role": "to"}로 변경해도 될까요
+    - [카라멜 마끼야또]{"entity": "menu", "role": "from"}를 [바닐라 라떼]{"entity": "menu", "role": "to"}로 주문 변경해주세요
+    - [딸기주스]{"entity": "menu", "role": "from"}를 [바나나주스]{"entity": "menu", "role": "to"}로 변경하고 싶어요
+    - 방금 [키위주스]{"entity": "menu", "role": "from"} 시킨거 [레몬티]{"entity": "menu", "role": "to"}로 바꿀게요
+    - 아까 [딸기 주스]{"entity": "menu", "role": "from"} [세잔]{"entity": "count", "role": "from"} 주문했는데 [두]{"entity": "count", "role": "to"}잔으로 주문을 바꿔 주시겠어요
+    - 아이가 먹고 싶다고 했던 [키위 주스]{"entity": "menu", "role": "from"}는 취소 하고 [딸기 주스]{"entity": "menu", "role": "to"}로 변경 해주세요
+    - [복숭아 에이드]{"entity": "menu", "role": "from"} [5]{"entity": "count", "role": "from"}개에서 [4]{"entity": "count", "role": "to"}개로 변경해주세요
+    - [초코 스무디]{"entity": "menu", "role": "from"} 말고 [체리 에이드]{"entity": "menu", "role": "to"}로 변경하고 싶습니다
+    - [페퍼민트티]{"entity": "menu", "role": "from"} [두]{"entity": "count", "role": "from"} 개 주문했는데 [하나]{"entity": "count", "role": "to"}만 할게요
+    - 방금 [사과에이드]{"entity": "menu", "role": "from"} 주문한 거 [체리에이드]{"entity": "menu", "role": "to"}로 바꿔서 주문할게요
+    - [녹차]{"entity": "menu", "role": "from"} {뜨거운}{"entity":"temp","role":"from"} 거 주문했는데 {차가운}{"entity":"temp","role":"to"} 걸로 바꿔도 돼요?
+    - [카페라떼]{"entity": "menu", "role": "from"}를 취소하고 [크림아트라떼]{"entity": "menu", "role": "to"}로 메뉴 바꾸고 싶어요
+    - [밀크 티]{"entity": "menu", "role": "from"}에 [녹차]{"entity": "menu", "role": "to"}로 다시 주문할 수 있나요
+    - 방금 [딸기주스]{"entity": "menu", "role": "from"} 시켰는데 [오렌지주스]{"entity": "menu", "role": "to"}로 변경하고 싶어요
+    - 아까 주문한 [딸기주스]{"entity": "menu", "role": "from"} [한]{"entity": "count", "role": "from"}잔은 [오렌지주스]{"entity": "menu", "role": "to"}로 바꾸고 싶어요
+    - [아메리카노]{"entity": "menu", "role": "from"} 주문했는데 혹시 [카페라떼]{"entity": "menu", "role": "to"}로 바꿀 수 있나요
+    - [피치레몬티]{"entity": "menu", "role": "from"}말고 [블루베리티]{"entity": "menu", "role": "to"}로 변경 가능한가요
+    - [카페모카]{"entity": "menu", "role": "from"} [5]{"entity": "count", "role": "from"}개 다 [초코 스무디]{"entity": "menu", "role": "to"}로 변경해주실 수 있나요
+    - [카페모카]{"entity": "menu", "role": "from"} [한]{"entity": "count", "role": "from"} 잔 했던거 취소하고 [카페라떼]{"entity": "menu", "role": "to"} [세]{"entity": "count", "role": "to"} 잔으로 주문할게요
+    - [바닐라스무디]{"entity": "menu", "role": "from"}를 [카라멜마끼아또]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [망고스무디]{"entity": "menu", "role": "from"} [두]{"entity": "count", "role": "from"} 잔 [하나]{"entity": "count", "role": "to"}로 변경하겠습니다
+    - [따뜻한]{"entity": "temp", "role": "from"} [아메리카노]{"entity": "menu", "role": "from"} 시켰는데 [아이스]{"entity": "temp", "role": "to"}로 변경하고싶어요
+    - 저 방금 주문한 거 [레몬차]{"entity": "menu", "role": "from"} [2]{"entity": "count", "role": "from"}개는 [로즈힙티]{"entity": "menu", "role": "to"}으로 바꿨으면 합니다
+    - [사과 에이드]{"entity": "menu", "role": "from"} [1]{"entity": "count", "role": "from"}개는 [체리 에이드]{"entity": "menu", "role": "to"}으로 바꿀게요
+    - 메뉴 중에 [카페모카]{"entity": "menu", "role": "from"}는 [크림아트라떼]{"entity": "menu", "role": "to"}로 변경해주실 수 있어요
+    - 저 [페퍼민트티]{"entity": "menu", "role": "from"} 말고 [캐모마일티]{"entity": "menu", "role": "to"}로 바꿀게요
+    - [카페라떼]{"entity": "menu", "role": "from"}로 [두]{"entity": "count", "role": "from"} 개 주문했는데 [하나]{"entity": "count", "role": "to"}로 변경 좀 해주세요
+    - 그럼 [허니자몽블랙티]{"entity": "menu", "role": "from"}는 [두]{"entity": "count", "role": "to"} 잔 주세요
+    - [사과에이드]{"entity": "menu", "role": "from"} 말고 [망고에이드]{"entity": "menu", "role": "to"}으로 해주시겠어요
+    - [따뜻한]{"entity": "temp", "role": "from"} [자몽 피치티]{"entity": "menu", "role": "from"} 주문했는데 [시원한]{"entity": "temp", "role": "to"} 걸로 주문 변경할 수 있죠
+    - [복숭아아이스티]{"entity": "menu", "role": "from"} [두]{"entity": "count", "role": "from"} 개 주문했는데 [자몽피치티]{"entity": "menu", "role": "to"}로 바꿔주세요
+    - [아메리카노]{"entity": "menu", "role": "from"} 그냥 [따뜻한]{"entity": "temp", "role": "to"} 걸로 변경될까요
+    - [자몽 차]{"entity": "menu", "role": "from"} [자몽 티]{"entity": "menu", "role": "to"}로 변경해주세요
+    - 아까 주문한 [아메리카노]{"entity": "menu", "role": "from"} 아직 안 나왔으면 [딸기라떼]{"entity": "menu", "role": "to"}로 변경해 주세요
+    - [에스프레소]{"entity": "menu", "role": "from"}를 시켰는데 [아메리카노]{"entity": "menu", "role": "to"}로 변경할게요
+- intent: provide_size_temp
+  examples: |
+    - [따뜻하게](temp)해서 [미디움](size) 사이즈로 부탁해
+    - 제일 [작은](size) 걸로 [따뜻하게](temp) 해서 줘
+    - 아까 말한거 [뜨겁게](temp) 해서 [중간](size) 사이즈로 줘
+    - [핫](temp) [그란데](size) 사이즈로 할래
+    - 그걸로 [시원하게](temp) [큰](size) 사이즈
+    - [중간](size) 사이즈로 [따뜻하게](temp) 해서줘
+    - 아까 말한거 [차갑게](temp) 해서 [큰](size) 사이즈로 줘
+    - [핫](temp)해서 [톨](size) 사이즈로 부탁해
+    - [벤티](size)로 [핫](temp) 해줘
+    - [큰](size) 사이즈로 [뜨겁게](temp) 해서줘
+    - 그걸로 [따뜻하게](temp) [큰](size) 사이즈
+    - [따뜻하게](temp) [작은](size) 사이즈로 할래
+    - [차갑게](temp)해서 [라지](size) 사이즈로 부탁해
+    - [따뜻하게](temp) [스몰](size) 사이즈로 할래
+    - [뜨겁게](temp)해서 [톨](size) 사이즈로 부탁해
+    - 그럼 [아이스](temp)로 [큰거](size)로 할래
+    - [차갑게](temp)해서 [큰거](size) 사이즈로 부탁해
+    - [핫](temp) [중간](size)으로 부탁해
+    - [차갑게](temp)해서 [중간](size) 사이즈로 부탁해
+    - [뜨겁게](temp)해서 [중간](size) 사이즈로 부탁해
+    - [작은](size) 사이즈로 [따뜻하게](temp) 해서줘
+    - 제일 [중간](size) 걸로 [시원하게](temp) 해서 줘
+    - [따뜻하게](temp) [그란데](size)로 부탁해
+    - 아까 말한거 [뜨겁게](temp) 해서 [작은](size) 사이즈로 줘
+    - 아까 말한거 [차갑게](temp) 해서 [그란데](size) 사이즈로 줘
+    - [아이스](temp) [톨](size) 사이즈로 할래
+    - [아이스](temp) [스몰](size)으로 부탁해
+    - [작은](size) 사이즈로 [시원하게](temp) 해서줘
+    - 그럼 [따뜻하게](temp) [그란데](size)로 할래
+    - 제일 [작은](size) 걸로 [뜨겁게](temp) 해서 줘
+    - [아이스](temp)해서 [스몰](size) 사이즈로 부탁해
+    - 제일 [큰](size) 걸로 [시원하게](temp) 해서 줘
+    - [시원하게](temp) [작은](size) 사이즈로 할래
+    - [뜨겁게](temp) [톨](size)로 부탁해
+    - 그럼 [차갑게](temp) [라지](size)로 할래
+    - [뜨겁게](temp) [그란데](size)로 부탁해
+    - 아까 말한거 [시원하게](temp) 해서 [톨](size) 사이즈로 줘
+    - 아까 말한거 [시원하게](temp) 해서 [벤티](size) 사이즈로 줘
+    - 그럼 [핫](temp) [스몰](size)로 할래
+    - [라지](size) [아이스](temp)로 해줘
+    - 그럼 [차갑게](temp) [스몰](size)로 할래
+    - [따뜻하게](temp) [톨](size) 사이즈로 할래
+    - [작은거](size)로 [아이스](temp) 해줘
+    - [아이스](temp) [중간](size)으로 부탁해
+    - [차갑게](temp) [작은](size) 사이즈로 할래
+    - 제일 [큰](size) 걸로 [차갑게](temp) 해서 줘
+    - [핫](temp) [벤티](size)로 부탁해
+    - [차갑게](temp) [미디움](size)으로 부탁해
+    - 아까 말한거 [차갑게](temp) 해서 [라지](size) 사이즈로 줘
+    - 그걸로 [따뜻하게](temp) [중간](size) 사이즈
+    - 제일 [중간](size) 걸로 [차갑게](temp) 해서 줘
+    - [미디움](size)으로 [시원하게](temp) 해줘
+    - [차갑게](temp) [큰거](size)로 부탁해
+    - 그럼 [따뜻하게](temp) [스몰](size)로 할래
+    - [따뜻하게](temp)해서 [큰](size) 사이즈로 부탁해
+    - [따뜻하게](temp)해서 [중간거](size) 사이즈로 부탁해
+    - [차갑게](temp) [미디움](size) 사이즈로 할래
+    - [작은거](size)로 [핫](temp) 해줘
+    - 그걸로 [따뜻하게](temp) [벤티](size) 사이즈
+    - [아이스](temp)해서 [작은](size) 사이즈로 부탁해
+    - 그걸로 [뜨겁게](temp) [큰](size) 사이즈
+    - [큰거](size)로 [뜨겁게](temp) 해줘
+    - [뜨겁게](temp) [라지](size)로 부탁해
+    - [아이스](temp)해서 [톨](size) 사이즈로 부탁해
+    - 그걸로 [뜨겁게](temp) [라지](size) 사이즈
+    - 그럼 [핫](temp) [톨](size)로 할래
+    - [라지](size)로 [차갑게](temp) 해줘
+    - 아까 말한거 [시원하게](temp) 해서 [그란데](size) 사이즈로 줘
+    - 아까 말한거 [차갑게](temp) 해서 [벤티](size) 사이즈로 줘
+    - 그걸로 [시원하게](temp) [톨](size) 사이즈
+    - [벤티](size)로 [따뜻하게](temp) 해줘
+    - [미디움](size) 사이즈로 [뜨겁게](temp) 해서줘
+    - [따뜻하게](temp) [중간](size)으로 부탁해
+    - [시원하게](temp)해서 [중간](size) 사이즈로 부탁해
+    - 그럼 [시원하게](temp) [라지](size)로 할래
+    - [핫](temp)해서 [큰거](size) 사이즈로 부탁해
+    - 그걸로 [차갑게](temp) [작은](size) 사이즈
+    - 그걸로 [차갑게](temp) [톨](size) 사이즈
+    - [큰거](size)로 [시원하게](temp) 해줘
+    - 그걸로 [따뜻하게](temp) [그란데](size) 사이즈
+    - [따뜻하게](temp) [중간]거(size)로 부탁해
+    - [벤티](size) 사이즈로 [차갑게](temp) 해서줘
+    - [톨](size) 사이즈로 [따뜻하게](temp) 해서줘
+    - [따뜻하게](temp)해서 [큰거](size) 사이즈로 부탁해
+    - 그걸로 [차갑게](temp) [중간](size) 사이즈
+    - [차갑게](temp) [벤티](size) 사이즈로 할래
+    - [차갑게](temp) [스몰](size)으로 부탁해
+    - [그란데](size)로 [핫](temp) 해줘
+    - 그걸로 [따뜻하게](temp) [작은](size) 사이즈
+    - [그란데](size) 사이즈로 [시원하게](temp) 해줘
+    - [작은거](size)로 [뜨겁게](temp) 해줘
+    - [라지](size) 사이즈로 [시원하게](temp) 해서줘
+    - 아까 말한거 [따뜻하게](temp) 해서 [미디움](size) 사이즈로 줘
+    - 그걸로 [뜨겁게](temp) [벤티](size) 사이즈
+    - [핫](temp) [톨](size)로 부탁해
+    - [라지](size) 사이즈로 [뜨겁게](temp) 해서줘
+    - 그걸로 [따뜻하게](temp) [스몰](size) 사이즈
+    - [아이스](temp) [벤티](size) 사이즈로 할래
+    - [핫](temp) [큰](size) 사이즈로 할래
+    - [시원하게](temp)해서 [큰거](size) 사이즈로 부탁해
+    - [핫](temp) [스몰](size)으로 부탁해
+    - [시원하게](temp) [미디움](size)으로 부탁해
+    - 그걸로 [시원하게](temp) [작은](size) 사이즈
+    - [시원하게](temp) [중간](size) 사이즈로 할래
+    - [미디움](size) 사이즈로 [차갑게](temp) 해서줘
+    - 음 제일 [작은거](size)로 [따뜻하게](temp) 해줘
+    - [시원하게](temp)해서 [작은](size) 사이즈로 부탁해
+    - 그걸로 [따뜻하게](temp) [톨](size) 사이즈
+    - 제일 [중간](size) 걸로 [뜨겁게](temp) 해서 줘
+    - [중간]거(size)로 [차갑게](temp) 해줘
+    - 그럼 [핫](temp) [그란데](size)로 할래
+    - [시원하게](temp)해서 [스몰](size) 사이즈로 부탁해
+    - 그걸로 [시원하게](temp) [미디움](size) 사이즈
+    - [차갑게](temp)해서 [톨](size) 사이즈로 부탁해
+    - [차갑게](temp) [톨](size) 사이즈로 할래
+    - [스몰](size) 사이즈로 [차갑게](temp) 해서줘
+    - [톨](size) 사이즈로 [차갑게](temp) 해서줘
+    - [아이스](temp)해서 [큰거](size) 사이즈로 부탁해
+    - [따뜻하게](temp) [중간](size) 사이즈로 할래
+- intent: order_drink
+  examples: |
+    - [클래식아포가토]{"entity": "menu", "group": "1"} 주문 좀 할게요.
+    - [딸기라떼]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"}줘
+    - [밀크티]{"entity": "menu", "group": "1"} [차가운]{"entity": "temp", "group": "1"} 거 [하나요]{"entity": "count", "group": "1"}
+    - [쿠앤크 리터치노]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔에 [민트 리터치노]{"entity": "menu", "group": "2"} [벤티]{"entity": "size", "group": "2"} 사이즈로 [두]{"entity": "count", "group": "2"} 잔 부탁드립니다.
+    - 그럼 [바닐라 라떼]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} 주세요.
+    - [망고패션후르츠]{"entity": "menu", "group": "1"} 사이즈는 [중간]{"entity": "size", "group": "1"}사이즈로 주세요
+    - [아메리카노]{"entity": "menu", "group": "1"}[하나]{"entity": "count", "group": "1"}랑 [카페라떼]{"entity": "menu", "group": "2"} [두잔]{"entity": "count", "group": "2"}주세요
+    - [아이스]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} [카페모카]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "2"} 주세요
+    - [녹차]{"entity": "menu", "group": "1"}, [홍차]{"entity": "menu", "group": "2"}, [유자차]{"entity": "menu", "group": "3"} [한잔]{"entity": "count", "group": "1"}씩 주문할게요.
+    - [디카페인아메리카노]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"}이요
+    - [바닐라 라떼]{"entity": "menu", "group": "1"} [10]{"entity": "count", "group": "1"}잔 주문되나요?
+    - [뜨거운]{"entity": "temp", "group": "1"}[유자차]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"} 주세요.
+    - [카페라떼]{"entity": "menu", "group": "1"} [시원하게]{"entity": "temp", "group": "1"} [두잔]{"entity": "count", "group": "1"}줘
+    - [아메리카노]{"entity": "menu", "group": "1"}는 [라지]{"entity": "size", "group": "1"}사이즈로 [뜨겁게]{"entity": "temp", "group": "1"} 해주세요
+    - [아이스]{"entity": "temp", "group": "1"} [카페라떼]{"entity": "menu", "group": "1"} [3]{"entity": "count", "group": "1"}잔, [카페모카]{"entity": "menu", "group": "2"} [2]{"entity": "menu", "group": "2"}잔, [헤이즐럿 라떼]{"entity": "menu", "group": "3"}, [아이스]{"entity": "temp", "group": "4"} [아메리카노]{"entity": "menu", "group": "4"} [한잔]{"entity": "menu", "group": "4"}씩이요.
+    - [아메리카노]{"entity": "menu", "group": "1"} 는 [미디움]{"entity": "size", "group": "1"}으로 하고 [카페라떼]{"entity": "menu", "group": "2"}는 [라지]{"entity": "size", "group": "2"}로 할게요
+    - [오렌지주스]{"entity": "menu", "group": "1"} [두]{"entity": "count", "group": "1"} 잔 주세요.
+    - [아메리카노]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"}잔주세요
+    - [초코스무디]{"entity": "menu", "group": "1"} [두]{"entity": "count", "group": "1"} 잔 [시원한]{"entity": "temp", "group": "2"}  [사과에이드]{"entity": "menu", "group": "2"}  [한]{"entity": "count", "group": "2"} 잔
+    - [수박주스]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} 주세요.
+    - [차가운]{"entity": "temp", "group": "1"} [디카페인바닐라아메리카노]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"}잔주세요
+    - [아이스]{"entity": "temp", "group": "1"}[아메리카노]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔은 직접 내린 걸로 주세요
+    - [카페라떼]{"entity": "menu", "group": "1"} [차게]{"entity": "temp", "group": "1"} 해서 주세요
+    - [아메리카노]{"entity": "menu", "group": "1"} [톨]{"entity": "size", "group": "1"} 사이즈 [한]{"entity": "count", "group": "1"}잔 주세요.
+    - [바나나주스]{"entity": "menu", "group": "1"} [라지]{"entity": "size", "group": "1"}사이즈로 하나 주세요.
+    - [아이스]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} [다섯잔]{"entity": "count", "group": "1"} 큰{"entity":"size","group":"1"}거로
+    - [아이스]{"entity": "temp", "group": "1"}[아메리카노]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"}잔주세요
+    - [돌체라떼]{"entity": "menu", "group": "1"} [핫]{"entity": "temp", "group": "1"}으로 [네]{"entity": "count", "group": "1"} 잔 테이블로 주문할게요.
+    - [아이스]{"entity": "temp", "group": "1"}[아메리카노]{"entity": "menu", "group": "1"} [2]{"entity": "count", "group": "1"}잔과 [아이스]{"entity": "temp", "group": "2"} [카페라떼]{"entity": "menu", "group": "2"} [2]{"entity": "count", "group": "2"}잔 주세요.
+    - [모카 프라푸치노]{"entity": "menu", "group": "1"} [작은]{"entity": "size", "group": "1"} 사이즈랑 [라떼]{"entity": "menu", "group": "2"} [큰]{"entity": "size", "group": "2"} 사이즈 주세요
+    - [카페모카]{"entity": "menu", "group": "1"} [중간]{"entity": "size", "group": "1"}사이즈 [두잔]{"entity": "count", "group": "1"}주시고 [카페라떼]{"entity": "menu", "group": "2"} [큰]{"entity": "size", "group": "2"}거로 주세요
+    - [아메리카노]{"entity": "menu", "group": "1"} [따뜻한]{"entity": "temp", "group": "1"} 걸로 [하나]{"entity": "count", "group": "1"} 줄래요
+    - [유자차]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"} 주문할게요
+    - [따뜻한]{"entity": "temp", "group": "1"} [플랫화이트]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔이랑 [차가운]{"entity": "temp", "group": "2"} [아메리카노]{"entity": "menu", "group": "2"} [한]{"entity": "count", "group": "2"} 잔 주세요.
+    - [밀크티]{"entity": "menu", "group": "1"} [따뜻하게]{"entity": "temp", "group": "1"}해서 [세]{"entity": "count", "group": "1"}잔도 주문할래요
+    - [차가운]{"entity": "temp", "group": "1"} [카페라떼]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}랑 [아메리카노]{"entity": "menu", "group": "2"} [두잔]{"entity": "count", "group": "2"} 주세요
+    - [아이스]{"entity": "temp", "group": "1"} [바닐라 라떼]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} 주문할게요
+    - [키위 주스]{"entity": "menu", "group": "1"}랑 [오렌지 주스]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "1"}씩 주세요.
+    - [민트 초코]{"entity": "menu", "group": "1"} 가장 [큰]{"entity": "size", "group": "1"} 사이즈로 하나만 주실래요
+    - [뜨거운]{"entity": "temp", "group": "1"}[카페모카]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}주세요
+    - [카페라떼]{"entity": "menu", "group": "1"} [두]{"entity": "count", "group": "1"}잔 [아메리카노]{"entity": "menu", "group": "2"} [한잔]{"entity": "count", "group": "2"}줘
+    - [카라멜마끼아또]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔 주세요
+    - [아이스]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"}랑 [아이스]{"entity": "temp", "group": "2"} [블랙밀크티]{"entity": "menu", "group": "2"} 배달해 주세요.
+    - [차가운]{"entity": "temp", "group": "1"} [디카페인아메리카노]{"entity": "menu", "group": "1"} [중간]{"entity": "size", "group": "1"}크기로 주세요
+    - [차가운]{"entity": "temp", "group": "1"}[아메리카노]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"}잔주세요
+    - [따뜻한]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} [4]{"entity": "count", "group": "1"}잔이랑 [아이스]{"entity": "temp", "group": "2"} [아메리카노]{"entity": "menu", "group": "2"} [2]{"entity": "count", "group": "2"}잔이랑 [헤이즐넛라떼]{"entity": "menu", "group": "3"} [2]{"entity": "count", "group": "3"}잔 주세요
+    - [차가운]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}랑 [아샷추]{"entity": "menu", "group": "2"} 주세요
+    - [아이스]{"entity": "temp", "group": "1"} [카페라떼]{"entity": "menu", "group": "1"} [두잔]{"entity": "count", "group": "1"} 이랑 [아메리카노]{"entity": "menu", "group": "2"} [뜨겁게]{"entity": "temp", "group": "2"}해서 주세요
+    - [흑임자라떼]{"entity": "menu", "group": "1"} 주세요.
+    - [콜드브루]{"entity": "menu", "group": "1"}[시원한]{"entity": "temp", "group": "1"} 걸로 [다섯잔]{"entity": "count", "group": "1"} 주세요
+    - [생강차]{"entity": "menu", "group": "1"} 주세요.
+    - [뜨거운]{"entity": "temp", "group": "1"}[유자차]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}주세요
+    - [아이스 카라멜마키아또]{"entity": "menu", "group": "1"} [라지]{"entity": "size", "group": "1"}로 [한잔]{"entity": "count", "group": "1"} 주세요
+    - [샤인머스켓 주스]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔에 [포도 주스]{"entity": "menu", "group": "2"} [두]{"entity": "count", "group": "2"} 잔 [파인애플 주스]{"entity": "menu", "group": "3"} [두]{"entity": "count", "group": "3"} 잔이요
+    - [바나나주스]{"entity": "menu", "group": "1"} 당도 추가해서 [하나]{"entity": "count", "group": "1"}만 주실래요?
+    - [리얼애플앤망고]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}랑 [베지포커스]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "2"} 주세요.
+    - [딸기요거트프라페]{"entity": "menu", "group": "1"} 주세요.
+    - [차가운]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} [두잔]{"entity": "count", "group": "1"}과 [밀크티]{"entity": "menu", "group": "2"} [중간]{"entity": "size", "group": "2"}거 주세요
+    - [카페라떼]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔 더 주실 수 있나요
+    - [바닐라라떼]{"entity": "menu", "group": "1"} [시원한]{"entity": "temp", "group": "1"} 거 주세요.
+    - [카페라떼]{"entity": "menu", "group": "1"} [5]{"entity": "count", "group": "1"}잔,[아메리카노]{"entity": "menu", "group": "2"} [5]{"entity": "count", "group": "2"}잔,[수제레몬티]{"entity": "menu", "group": "3"} [5]{"entity": "count", "group": "3"}잔,[녹차라떼]{"entity": "menu", "group": "4"} [5]{"entity": "count", "group": "4"}잔 주세요.
+    - [따뜻한]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} 머그컵에 주세요.
+    - [차가운]{"entity": "temp", "group": "1"} [제주말차라떼]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"}잔주세요
+    - [따뜻한]{"entity": "temp", "group": "1"} [아인슈페너]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔 주문할게요.
+    - [에스프레소]{"entity": "menu", "group": "1"}[뜨겁게]{"entity": "temp", "group": "1"} 해주세요
+    - [차가운]{"entity": "temp", "group": "1"}[롱블랙]{"entity": "menu", "group": "1"} [세잔]{"entity": "count", "group": "1"}주세요
+    - [딸기주스]{"entity": "menu", "group": "1"}가 너무 맛있어서 [한]{"entity": "count", "group": "1"} 잔 더 추가로 구매할게요
+    - [아샷추]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} 주세요
+    - [스트로베리필드]{"entity": "menu", "group": "1"}, [바바리안필드]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "1"}씩이랑 [아이스 아메리카노]{"entity": "menu", "group": "3"} [한]{"entity": "count", "group": "3"} 잔 주문할게요.
+    - [바닐라라떼]{"entity": "menu", "group": "1"} 주문 가능한가요
+    - [밀크티]{"entity": "menu", "group": "1"} [세잔]{"entity": "count", "group": "1"}이랑 [아메리카노]{"entity": "menu", "group": "2"} [한]{"entity": "count", "group": "2"}잔주세요
+    - [카페라떼]{"entity": "menu", "group": "1"} [따뜻한]{"entity": "temp", "group": "1"}거 [두]{"entity": "count", "group": "1"}잔이랑 [밀크티]{"entity": "menu", "group": "2"} [차갑게]{"entity": "temp", "group": "2"} 해서 [세]{"entity": "menu", "group": "2"}잔이요
+    - [아이스]{"entity": "temp", "group": "1"} [더블 몽블랑]{"entity": "menu", "group": "1"}이랑 [따뜻한]{"entity": "temp", "group": "2"} [감 라떼]{"entity": "menu", "group": "2"} [톨]{"entity": "size", "group": "2"}로 [1]{"entity": "count", "group": "2"}잔씩 주문할게요.
+    - [아이스초코]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔이랑 [두유 라떼]{"entity": "menu", "group": "2"} 주세요.
+    - 그럼 [딸기 바나나 주스]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}랑 [천도 복숭아 주스]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "2"} 주문하겠습니다.
+    - 우리 아이 먹일 [따뜻한]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} [세잔]{"entity": "count", "group": "1"} 주세요
+    - [오렌지키위 주스]{"entity": "menu", "group": "1"} [1]{"entity": "count", "group": "1"}개랑 [망고바나나 주스]{"entity": "menu", "group": "2"} [1]{"entity": "count", "group": "2"}개 주세요.
+    - [청포도 주스]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"} 주문할게요.
+    - [키위주스]{"entity": "menu", "group": "1"}랑 [딸기에이드]{"entity": "menu", "group": "2"} [한잔]{"entity": "count", "group": "2"}씩 주세요.
+    - 음음 [시원한]{"entity": "temp", "group": "1"}  [밀크티]{"entity": "menu", "group": "1"} [두잔]{"entity": "count", "group": "1"}  [딸기라떼]{"entity": "menu", "group": "2"}  [하나]{"entity": "count", "group": "2"} 줘
+    - [미숫가루]{"entity": "menu", "group": "1"} [아이스]{"entity": "temp", "group": "1"}로 주실래요?
+    - [바닐라라떼]{"entity": "menu", "group": "1"} [시원한]{"entity": "temp", "group": "1"} 거 주세요
+    - [녹차]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 개, [유자차]{"entity": "menu", "group": "2"} [한]{"entity": "count", "group": "2"}  개, [국화차]{"entity": "menu", "group": "3"} [한]{"entity": "count", "group": "3"}  개 주세요.
+    - 저희 테이블은 [아이스티]{"entity": "menu", "group": "1"}로 [여섯]{"entity": "count", "group": "1"} 잔 부탁드릴게요.
+    - [아이스]{"entity": "temp", "group": "1"} [카페라떼]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}, [아이스 아메리카노]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "2"} 주문할게요.
+    - [초코스무디]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} 주세요.
+    - [프렌치 얼그레이 아이스티]{"entity": "menu", "group": "1"}로 [두]{"entity": "count", "group": "1"} 잔 주문할게요.
+    - [딸기스무디]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}  [바나나스무디]{"entity": "menu", "group": "2"}  [두]{"entity": "count", "group": "2"} 잔주문할게
+    - [카푸치노]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} 주세요.
+    - [콜드브루]{"entity": "menu", "group": "1"} [하나요]{"entity": "count", "group": "1"}
+    - [아메리카노]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}랑 [카페라떼]{"entity": "menu", "group": "2"} [한잔]{"entity": "count", "group": "2"} 주세요
+    - 그럼 [감 주스]{"entity": "menu", "group": "1"}로 [두]{"entity": "count", "group": "1"}잔 주문할게요.
+    - [뜨거운]{"entity": "temp", "group": "1"}[에스프레소]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}주세요
+    - [아메리카노]{"entity": "menu", "group": "1"}랑 [카페라떼]{"entity": "menu", "group": "2"} 둘 다 리필해 주셨으면 하는데요.
+    - [아메리카노]{"entity": "menu", "group": "1"} [아이스]{"entity": "temp", "group": "1"}로 가능할까요
+    - [아메리카노]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"} 주세요
+    - [카페라떼]{"entity": "menu", "group": "1"} [핫]{"entity": "temp", "group": "1"}으로 [한]{"entity": "count", "group": "1"} 잔주세요
+    - [아이스 아메리카노]{"entity": "menu", "group": "1"} [미디움]{"entity": "size", "group": "1"} 사이즈로 부탁드려요
+    - [아이스]{"entity": "temp", "group": "1"}[아메리카노]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}랑 [카페라떼]{"entity": "menu", "group": "2"} [두잔]{"entity": "count", "group": "2"}주문할게
+    - [미숫가루라떼]{"entity": "menu", "group": "1"} 주세요.
+    - [더치커피]{"entity": "menu", "group": "1"} [하나요]{"entity": "count", "group": "1"}
+    - [바나나주스]{"entity": "menu", "group": "1"}를 당도 추가하는 거 없이 [3]{"entity": "count", "group": "1"}개만 주실래요?
+    - 음료는 [바닐라 라떼]{"entity": "menu", "group": "1"}랑 [코코넛 라떼]{"entity": "menu", "group": "2"}로 주문하겠습니다.
+    - [바닐라 라떼]{"entity": "menu", "group": "1"}
+    - [아메리카노]{"entity": "menu", "group": "1"} [뜨거운]{"entity": "temp", "group": "1"}걸로 주세요
+    - [토피넛 라떼]{"entity": "menu", "group": "1"} [두]{"entity": "count", "group": "1"} 잔 주세요.
+    - [차가운]{"entity": "temp", "group": "1"} [얼그레이]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"}잔주세요
+    - [밀크티]{"entity": "menu", "group": "1"}[두]{"entity": "count", "group": "1"}잔주세용
+    - [아이스]{"entity": "temp", "group": "1"}[아메리카노]{"entity": "menu", "group": "1"}, [핫초코]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "2"} 주세요
+    - [아메리카노]{"entity": "menu", "group": "1"} [중간]{"entity": "size", "group": "1"}으로 [하나]{"entity": "count", "group": "1"} [카페라떼]{"entity": "menu", "group": "2"} [뜨겁게]{"entity": "temp", "group": "2"}해서 [스몰]{"entity": "size", "group": "2"}로 [두잔]{"entity": "count", "group": "2"}줘
+    - 음료는 [아메리카노]{"entity": "menu", "group": "1"} [세잔]{"entity": "count", "group": "1"}주문할게요
+    - [밀크티]{"entity": "menu", "group": "1"} [세 잔]{"entity": "count", "group": "1"} [큰]{"entity": "size", "group": "1"}거로 해주세요
+    - [대추차]{"entity": "menu", "group": "1"}, [국화차]{"entity": "menu", "group": "2"}, [쌍화차]{"entity": "menu", "group": "3"} [한]{"entity": "count", "group": "1"} 잔씩 [따뜻한]{"entity": "temp", "group": "1"} 걸로 주세요.
+    - [아메리카노]{"entity": "menu", "group": "1"} [따뜻한]{"entity": "temp", "group": "1"} 걸로 [하나]{"entity": "count", "group": "1"} 줄래요?
+    - [뜨거운]{"entity": "temp", "group": "1"} [아메리카노]{"entity": "menu", "group": "1"} 부탁해
+    - [라떼]{"entity": "menu", "group": "1"}랑 [카라멜마끼아또]{"entity": "menu", "group": "2"} 주세요
+    - [아메리카노]{"entity": "menu", "group": "1"}, [카페라떼]{"entity": "menu", "group": "2"}는 [아이스]{"entity": "temp", "group": "2"}로 해주세요.
+    - [아이스]{"entity": "temp", "group": "1"}[아메리카노]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"}랑 [딸기라떼]{"entity": "menu", "group": "2"} [두잔]{"entity": "menu", "group": "2"}이요
+    - [카페라떼]{"entity": "menu", "group": "1"}에 샷 추가해서 [뜨겁게]{"entity": "temp", "group": "1"} [한]{"entity": "count", "group": "1"} 잔만 주세요.
+    - 그럼 [따뜻한]{"entity": "temp", "group": "1"} [모카 라떼]{"entity": "menu", "group": "1"}랑 [아이스]{"entity": "temp", "group": "2"} [바닐라 라떼]{"entity": "menu", "group": "2"} [아메리카노]{"entity": "menu", "group": "3"} [한]{"entity": "count", "group": "3"} 잔 주세요.
+    - [한라봉주스]{"entity": "menu", "group": "1"} [하나]{"entity": "count", "group": "1"} 주세요
+    - [사과주스]{"entity": "menu", "group": "1"}  주세요.
+    - 그럼 [다크초코 밀크티]{"entity": "menu", "group": "1"} 토핑 추가해서 [아이스]{"entity": "menu", "group": "1"}로 [하나]{"entity": "count", "group": "1"} 주세요.
+    - [아메리카노]{"entity": "menu", "group": "1"}
+    - [카페라떼]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"} [따뜻]{"entity": "temp", "group": "1"}하게 주세요.
+    - [자바칩 프라푸치노]{"entity": "menu", "group": "1"}로 주세요.
+    - 정문 쪽 테이블로 [청귤차]{"entity": "menu", "group": "1"}랑 [자몽차]{"entity": "menu", "group": "2"} 주문할게요.
+    - [레몬차]{"entity": "menu", "group": "1"} [두]{"entity": "count", "group": "1"} 잔 주세요.
+    - [바닐라라떼]{"entity": "menu", "group": "1"} [한]{"entity": "count", "group": "1"} 잔 [차갑게]{"entity": "temp", "group": "1"} 하고 [아이스]{"entity": "menu", "group": "2"} [아메리카노]{"entity": "menu", "group": "2"} [두]{"entity": "count", "group": "2"} 잔 주문할 수 있을까요
+    - [헤이즐넛라떼]{"entity": "menu", "group": "1"}[차갑게]{"entity": "temp", "group": "1"} [네잔]{"entity": "count", "group": "1"} 해주세요
+    - [포도 아이스크림]{"entity": "menu", "group": "1"}이랑 [밤라떼]{"entity": "menu", "group": "2"} [하나]{"entity": "count", "group": "2"}씩 주문할게요.
+    - [뜨거운]{"entity": "temp", "group": "1"} [밀크티]{"entity": "menu", "group": "1"} [한잔]{"entity": "count", "group": "1"} 주세요
+- regex: count
+  examples: |
+    - \b[한|두|세|네|다섯|여섯|일곱|여덟|아홉|열|열하나|열둘|열세]잔\b
+- regex: menu
+  examples: |
+    - \b[얼그레이|캐모바일|그린|아이스|밀크|유자|자몽|아이스|복숭아아이스]티\b
+    - \b[자몽|블루레몬|청포도|레몬]에이드\b
+    - \b[카페|초코|딸기|바나나]라떼\b
+- lookup: menu
+  examples: |
+    - 감주스
+    - 고구마라테
+    - 그린티라떼
+    - 녹차
+    - 다크초코밀크티
+    - 단호박라떼
+    - 더치아메리카노
+    - 더치커피
+    - 돌체라떼
+    - 돌체블랙밀크티
+    - 디카페인바닐라아메리카노
+    - 디카페인아메리카노
+    - 디카페인헤이즐넛아메리카노
+    - 딸기라떼
+    - 딸기바나나주스
+    - 딸기쉐이크
+    - 딸기에이드
+    - 딸기요거트프라페
+    - 딸기주스
+    - 라임모히또
+    - 레몬에이드
+    - 레몬차
+    - 레몬티
+    - 로얄밀크티
+    - 루이보스
+    - 루이보스티
+    - 망고스무디
+    - 망고주스
+    - 매실차
+    - 멜론주스
+    - 미숫가루
+    - 미숫가루라떼
+    - 밀크티
+    - 바나나주스
+    - 바닐라라떼
+    - 바닐라아메리카노
+    - 복숭아아이스티
+    - 블루레몬에이드
+    - 블루베리스무디
+    - 사과주스
+    - 생강차
+    - 생딸기라떼
+    - 숏블랙
+    - 수박주스
+    - 아메리카노
+    - 아샷추
+    - 아이스바닐라라떼
+    - 아이스아메리카노
+    - 아이스카라멜마키아또
+    - 아이스카페라떼
+    - 아이스티
+    - 아인슈페너
+    - 얼그레이
+    - 얼그레이티
+    - 에스프레소
+    - 연유라떼
+    - 오렌지주스
+    - 유자차
+    - 유자티
+    - 자몽에이드
+    - 자몽주스
+    - 자몽차
+    - 자몽티
+    - 자바칩프라푸치노
+    - 제주말차라떼
+    - 청귤차
+    - 청포도에이드
+    - 청포도주스
+    - 체리에이드
+    - 체리콕
+    - 초코라떼
+    - 초코스무디
+    - 카라멜마끼아또
+    - 카라멜마끼야또
+    - 카모마일티
+    - 카페라떼
+    - 카페모카
+    - 카푸치노
+    - 캐모마일
+    - 캐모바일
+    - 캐모바일티
+    - 콜드브루
+    - 콜드브루라떼
+    - 클래식아포가토
+    - 키위주스
+    - 타로밀크티
+    - 타로버블티
+    - 토피넛라떼
+    - 파인애플주스
+    - 페퍼민트
+    - 페퍼민트티
+    - 프렌치얼그레이아이스티
+    - 플랫화이트
+    - 플레인요거트스무디
+    - 한라봉주스
+    - 허니자몽블랙티
+    - 헤이즐넛라떼
+    - 헤이즐넛아메리카노
+    - 홍시주스
+    - 홍차
+    - 화이트초콜릿모카
+    - 흑임자라떼
+    - 흑임자밀크티
+    - 흑임자카페라떼
+- lookup: count
+  examples: |
+    - 하나
+    - 한
+    - 한개
+    - 한개요
+    - 하나요
+    - 두개
+    - 두
+    - 한잔
+    - 한잔
+    - 한잔
+    - 하나
+    - 두잔
+    - 셋
+    - 세잔
+    - 넷
+    - 네잔
+    - 다섯잔
+    - 여섯잔
+    - 일곱잔
+    - 여덟전
+    - 아홉잔
+    - 열잔
+- lookup: size
+  examples: |
+    - 라지
+    - 미디움
+    - 스몰
+    - 큰
+    - 작은
+    - 중간
+    - 크게
+    - 이러
+    - 기본
+    - 일반
+    - 빅
+- lookup: temp
+  examples: |
+    - 아이스
+    - 콜드
+    - 차가운
+    - 차가운
+    - 차가운
+    - 차갑게
+    - 따뜻한
+    - 뜨거운
+    - 뜨겁게
+    - 핫
+    - 시원한
+    - 시원하게
+    - 따듯하게
+    - 차게
+    - 콜드로
+    - 아이스로
+    - 뜨수운
+    - 따뜻
